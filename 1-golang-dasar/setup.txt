@@ -1,1 +1,10 @@
 - membuat module: go mod init nama-module
+
+Menjalankan kode golang :
+1. Dengan cara membuild/compile terlebih dahulu
+- go build
+- windows: 1-golang-dasar.exe
+- linux/mac : ./1-golang-dasar
+
+2. Menjalankan kode program tanpa kompilasi (cocok saat development)
+- go run nama-file.go
