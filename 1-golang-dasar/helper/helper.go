@@ -2,10 +2,10 @@ package helper
 
 import "fmt"
 
-var version = "1.0.0"
-var Application = "golang"
+var version = "1.0.0" // private, tidak bisa diakses dari luar package
+var Application = "golang" // public, bisa diakses dari luar package
 
-func sayGoodBye(name string) string {
+func sayGoodBye(name string) string { // private, tidak bisa diakses dari luar package
 	return "Good Bye " + name
 }
 
