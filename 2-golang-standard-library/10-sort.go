@@ -18,17 +18,19 @@ type User struct {
 
 type UserSlice []User
 
-func (s UserSlice) Len() int {
+func (s UserSlice) Len() int { // Menentukan jumlah panjang data
 	return len(s)
 }
 
-func (s UserSlice) Less(i, j int) bool {
+func (s UserSlice) Less(i, j int) bool { // Menentukan aturan pengurutan data, jika i < j maka akan diurutkan dari kecil ke besar, jika i > j maka akan diurutkan dari besar ke kecil
 	return s[i].Age < s[j].Age
 }
 
 func (s UserSlice) Swap(i, j int) {
+	// Menukar posisi data pada index i dan j dalam slice
+	// Digunakan oleh package sort saat proses pengurutan
 	s[i], s[j] = s[j], s[i]
-}
+} 
 
 func main() {
 	users := []User{

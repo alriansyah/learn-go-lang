@@ -24,7 +24,7 @@ func main() {
 	var now time.Time = time.Now()
 	fmt.Println(now)
 
-	var utc time.Time = time.Date(2009, time.August, 17, 0, 0, 0, 0, time.UTC)
+	var utc time.Time = time.Date(2009, time.August, 17, 0, 0, 0, 0, time.UTC) // (tahun, bulan, tanggal, jam, menit, detik, nanosecond, lokasi)
 	fmt.Println(utc)
 	fmt.Println(utc.Local())
 

@@ -13,8 +13,14 @@ import (
 // - Reflection sangat berguna ketika kita ingin membuat library yang general sehingga mudah digunakan
 // - https://golang.org/pkg/reflect/
 
+// StructTag
+// - StructTag adalah fitur yang ada di Go-Lang untuk menyimpan metadata pada struct field
+// - Metadata ini bisa kita baca menggunakan package reflect, sehingga kita bisa membuat library yang general dan mudah digunakan
+// - Cocok untuk membuat validasi, serialisasi dan lain-lain
+// - Pelajari lebih lanjut otodidak agar lebih paham
+
 type Sample struct {
-	Name string `required:"true" max:"10"`
+	Name string `required:"true" max:"10"` // StructTag, bisa digunakan untuk menyimpan metadata pada struct field, yang bisa kita baca menggunakan package reflect
 }
 
 type Person struct {

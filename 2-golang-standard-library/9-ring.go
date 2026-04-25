@@ -34,6 +34,7 @@ func main() {
 	//data = data.Next()
 	//data.Value = "Value 5"
 
+	// Melakukan iterasi pada circular list
 	data.Do(func(value any) {
 		fmt.Println(value)
 	})

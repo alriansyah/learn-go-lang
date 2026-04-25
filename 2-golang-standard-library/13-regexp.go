@@ -15,7 +15,7 @@ import (
 // Beberapa Function di Package regexp :
 // regexp.MustCompile(string) : Membuat Regexp
 // Regexp.MatchString(string) bool : Mengecek apakah Regexp match dengan string
-// Regexp.FindAllString(string, max) : Mencari string yang match dengan maximum jumlah hasil
+// Regexp.FindAllString(string, max) : Mencari string yang match dengan maximum jumlah hasil, retrnnya berupa slice of string
 
 func main() {
 	var regex *regexp.Regexp = regexp.MustCompile(`e([a-z])o`)
