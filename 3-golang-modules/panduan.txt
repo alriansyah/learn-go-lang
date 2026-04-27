@@ -4,3 +4,8 @@
     - membuat tag di gitnya
     - untuk tag disarankan dimulai dengan kata v "v1.0.0" : git tag v1.0.0, kemudian git push -u origin v1.0.0
 - Menambah dependency : go get nama-module
+- Upgrade versi module :
+    - kita cukup buat tag baru di git sesui versinya
+    - patikan sudah commit dan push perubahannya
+    - git tag v1.1.0
+    - git push -u origin v1.1.0
