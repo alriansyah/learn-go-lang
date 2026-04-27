@@ -1,0 +1,6 @@
+- Materi golang modules : https://docs.google.com/presentation/d/1nzeNb7w_F4_yA-9C95EYCrggObhQWt9WronMuhIG5LE/edit?slide=id.p#slide=id.p
+- membuat module: go mod init nama-module
+- Cara release versi go module di github :
+    - membuat tag di gitnya
+    - untuk tag disarankan dimulai dengan kata v "v1.0.0" : git tag v1.0.0, kemudian git push -u origin v1.0.0
+- Menambah dependency : go get nama-module
