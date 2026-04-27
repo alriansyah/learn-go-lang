@@ -9,3 +9,6 @@
     - patikan sudah commit dan push perubahannya
     - git tag v1.1.0
     - git push -u origin v1.1.0
+- Upgrade dependency :
+    - Untuk upgrade dependency ke versi terbaru, kita bisa mengubah isi go.mod, lalu mengubah tag nya menjadi tag terbaru
+    - Untuk mendownload versi terbaru, gunakan perintah : go get
