@@ -17,11 +17,11 @@ func main() {
 	names := []string{"John", "Paul", "George", "Ringo"}
 	values := []int{100, 95, 80, 90}
 
-	fmt.Println(slices.Min(names))
-	fmt.Println(slices.Min(values))
-	fmt.Println(slices.Max(names))
-	fmt.Println(slices.Max(values))
-	fmt.Println(slices.Contains(names, "Eko"))
-	fmt.Println(slices.Index(names, "Eko"))
-	fmt.Println(slices.Index(names, "Paul"))
+	fmt.Println(slices.Min(names))             // Min : untuk mencari nilai minimum dari slice, return string atau int tergantung tipe data slice
+	fmt.Println(slices.Min(values))            // Min : untuk mencari nilai minimum dari slice, return string atau int tergantung tipe data slice
+	fmt.Println(slices.Max(names))             // Max : untuk mencari nilai maksimum dari slice, return string atau int tergantung tipe data slice
+	fmt.Println(slices.Max(values))            // Max : untuk mencari nilai maksimum dari slice, return string atau int tergantung tipe data slice
+	fmt.Println(slices.Contains(names, "Eko")) // Contains : untuk mengecek apakah data ada di dalam slice atau tidak, return bool
+	fmt.Println(slices.Index(names, "Eko"))    // Index : untuk mengecek index dari data di dalam slice, return int
+	fmt.Println(slices.Index(names, "Paul"))   // Index : untuk mengecek index dari data di dalam slice, return int
 }
