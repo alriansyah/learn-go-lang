@@ -12,3 +12,8 @@
 - Upgrade dependency :
     - Untuk upgrade dependency ke versi terbaru, kita bisa mengubah isi go.mod, lalu mengubah tag nya menjadi tag terbaru
     - Untuk mendownload versi terbaru, gunakan perintah : go get
+- Major Upgrade : 
+    - misal github.com/nama/go-say-hello menjadi github.com/nama/go-say-hello/v2
+    - lalu project yang menggunakan dependency tersebut harus download ulang untuk menggunakan v terbaru : 
+        - hapus github.com/nama/go-say-hello di go.mod karena akan diganti ke v terbaru
+        - go get github.com/nama/go-say-hello/v2

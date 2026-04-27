@@ -2,3 +2,5 @@ github.com/alriansyah/go-say-hello v1.0.0 h1:bOCmfh1i1M2YKPkbvuKv9SOsRfmFRkO27gF
 github.com/alriansyah/go-say-hello v1.0.0/go.mod h1:qqKyK8x8K96ZZI5nYAFWmgYFSrBL/xwexlrXtwOoU/g=
 github.com/alriansyah/go-say-hello v1.1.0 h1:OKDKONcg+TNxFUDO1/bIOMrLGQGZUuTfmJ61A4yYgCY=
 github.com/alriansyah/go-say-hello v1.1.0/go.mod h1:qqKyK8x8K96ZZI5nYAFWmgYFSrBL/xwexlrXtwOoU/g=
+github.com/alriansyah/go-say-hello/v2 v2.0.0 h1:hBl51vof7v2mANPCiZC0OIgubpMlctWtub2ICWD2SYE=
+github.com/alriansyah/go-say-hello/v2 v2.0.0/go.mod h1:clFxxvoqofe9P6ui++HwC0tejGyAMNC+hoXMlvkW3+8=
