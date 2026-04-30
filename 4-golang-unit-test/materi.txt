@@ -11,3 +11,4 @@ https://docs.google.com/presentation/d/1XxMEaA-JsPHr9BUw2oIOPlEL_psI3EaUFUpuvdlD
 - Menggagalkan unit test, disarankan menggunakan Error("Pesan error") atau Fatal("Pesan error"), karena bisa memberikan keterangan errornya apa
 - Assertion : https://docs.google.com/presentation/d/1XxMEaA-JsPHr9BUw2oIOPlEL_psI3EaUFUpuvdlDB_Q/edit?slide=id.gb233370586_0_418#slide=id.gb233370586_0_418
 - Skip Test : https://docs.google.com/presentation/d/1XxMEaA-JsPHr9BUw2oIOPlEL_psI3EaUFUpuvdlDB_Q/edit?slide=id.gb233370586_0_414#slide=id.gb233370586_0_414
+- Before dan After Test : https://docs.google.com/presentation/d/1XxMEaA-JsPHr9BUw2oIOPlEL_psI3EaUFUpuvdlDB_Q/edit?slide=id.gb233370586_0_422#slide=id.gb233370586_0_422
