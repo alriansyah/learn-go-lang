@@ -1,0 +1,11 @@
+https://docs.google.com/presentation/d/1XxMEaA-JsPHr9BUw2oIOPlEL_psI3EaUFUpuvdlDB_Q/edit?slide=id.p#slide=id.p
+
+- Untuk membuat file unit test, kita harus menggunakan akhiran _test, misal "hello_world_test.go"
+- Nama function untuk unit test harus diawali dengan nama Test, misal "TestHelloWorld",
+    - Selanjutnya harus memiliki parameter (t *testing.T) dan tidak mengembalikan return value
+- Untuk menjalankan unit test : go test
+- Jika kita ingin lihat lebih detail function test apa saja yang sudah di running : go test -v
+- Dan jika kita ingin memilih function unit test mana yang ingin di running : go test -v -run TestNamaFunction
+- Jika kita ingin menjalankan semua unit test dari top folder module nya : go test ./... , go test -v ./...
+    - Jika ingin spesifik : go test -v ./... -run TestHelloWorldRian
+- 

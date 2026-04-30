@@ -10,7 +10,7 @@ import "fmt" // module format
 // Solusinya?
 // Karena sekarang kita masih dalam fase belajar, oleh karena itu kita tidak akan melakukan build project module terlebih dahulu
 // Sekarang kita akan fokus menjalankan file Golang satu persatu, sehingga tidak akan terjadi error jika dijalankan file nya satu persatu
-// Tapi INGAT, pada kenyataannya nanti, saat kita membuat project, kita hanya akan membuat satu main function saj
+// Tapi INGAT, pada kenyataannya nanti, saat kita membuat project, kita hanya akan membuat satu main function saja
 
 func main() {
 	fmt.Println("This is a sample!")

@@ -16,7 +16,7 @@ func main() {
 	fmt.Println(nilai16)
 
 	var name = "Eko Kurniawan"
-	var e uint8 = name[0] // otomatis enjadi dalam bentuk byte/uint8, sehingga perli di konversi ke string
+	var e uint8 = name[0] // otomatis menjadi dalam bentuk byte/uint8, sehingga perlu di konversi ke string
 	var eString = string(e)
 
 	fmt.Println(name)

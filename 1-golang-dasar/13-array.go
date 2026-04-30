@@ -29,6 +29,8 @@ func main() {
 		110,
 	}
 
+	// values[5] = 120 // Error karena index ke 5 tidak ada, panjang array values adalah 5 dengan index terakhir 4
+
 	fmt.Println(values)
 	fmt.Println(values[0])
 	fmt.Println(values[1])
