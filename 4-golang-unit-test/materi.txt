@@ -8,4 +8,4 @@ https://docs.google.com/presentation/d/1XxMEaA-JsPHr9BUw2oIOPlEL_psI3EaUFUpuvdlD
 - Dan jika kita ingin memilih function unit test mana yang ingin di running : go test -v -run TestNamaFunction
 - Jika kita ingin menjalankan semua unit test dari top folder module nya : go test ./... , go test -v ./...
     - Jika ingin spesifik : go test -v ./... -run TestHelloWorldRian
-- 
+- Menggagalkan unit test, disarankan menggunakan Error("Pesan error") atau Fatal("Pesan error"), karena bisa memberikan keterangan errornya apa

@@ -10,7 +10,7 @@ func TestHelloWorldEko(t *testing.T) {
 
 	if result != "Hello Eko" {
 		// error
-		t.Fatal("Result must be 'Hello Eko'")
+		t.Error("Result must be 'Hello Eko'")
 	}
 
 	fmt.Println("TestHelloWorldEko Done")
