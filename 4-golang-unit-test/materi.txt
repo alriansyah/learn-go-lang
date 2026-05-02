@@ -16,3 +16,4 @@ https://docs.google.com/presentation/d/1XxMEaA-JsPHr9BUw2oIOPlEL_psI3EaUFUpuvdlD
     - Jika kita ingin menjalankan hanya salah satu sub test : go test -v -run TestNamaFunction/NamaSubTes, go test -v ./... -run=TestNamaFunction/NamaSubTes
     - Atau untuk semua test semua sub test di semua unit test yang memiliki kata tertentu (Tidak Disarankan) : go test -v -run /Eko
 - Table Test : https://docs.google.com/presentation/d/1XxMEaA-JsPHr9BUw2oIOPlEL_psI3EaUFUpuvdlDB_Q/edit?slide=id.gb233370586_0_426#slide=id.gb233370586_0_426
+- Mock : https://docs.google.com/presentation/d/1XxMEaA-JsPHr9BUw2oIOPlEL_psI3EaUFUpuvdlDB_Q/edit?slide=id.gb233370586_0_616#slide=id.gb233370586_0_616
