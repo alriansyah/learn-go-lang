@@ -17,3 +17,7 @@ https://docs.google.com/presentation/d/1XxMEaA-JsPHr9BUw2oIOPlEL_psI3EaUFUpuvdlD
     - Atau untuk semua test semua sub test di semua unit test yang memiliki kata tertentu (Tidak Disarankan) : go test -v -run /Eko
 - Table Test : https://docs.google.com/presentation/d/1XxMEaA-JsPHr9BUw2oIOPlEL_psI3EaUFUpuvdlDB_Q/edit?slide=id.gb233370586_0_426#slide=id.gb233370586_0_426
 - Mock : https://docs.google.com/presentation/d/1XxMEaA-JsPHr9BUw2oIOPlEL_psI3EaUFUpuvdlDB_Q/edit?slide=id.gb233370586_0_616#slide=id.gb233370586_0_616
+- Benchmark : https://docs.google.com/presentation/d/1XxMEaA-JsPHr9BUw2oIOPlEL_psI3EaUFUpuvdlDB_Q/edit?slide=id.gb233370586_0_434#slide=id.gb233370586_0_434
+- Membuat Benchmark : https://docs.google.com/presentation/d/1XxMEaA-JsPHr9BUw2oIOPlEL_psI3EaUFUpuvdlDB_Q/edit?slide=id.gb233370586_0_630#slide=id.gb233370586_0_630
+    - run salah satu function benchmark tanpa run unit test : go test -v -run=TanpaTest -bench=BenchmarkHelloWorldKurniawan ./...
+    - run semua benchmark masih terkendala, nanti ekplore lagi
