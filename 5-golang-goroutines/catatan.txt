@@ -1,0 +1,32 @@
+Materi Goroutine :https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?slide=id.p#slide=id.p
+Penjelasan Concurrency dan Parallel : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?slide=id.gb51031e0c2_0_278#slide=id.gb51031e0c2_0_278
+
+Parallel :
+- Parallel programming sederhananya adalah memecahkan suatu masalah dengan cara membaginya menjadi yang lebih kecil, dan dijalankan secara bersamaan pada waktu yang bersamaan pula
+- Contoh Parallel :
+	- Menjalankan beberapa aplikasi sekaligus di sistem operasi kita (office, editor, browser, dan lain-lain)
+	- Beberapa koki menyiapkan makanan di restoran, dimana tiap koki membuat makanan masing-masing
+	- Antrian di Bank, dimana tiap teller melayani nasabah nya masing-masing
+-
+
+
+Golang sebenarnya bukan parallel, defaultnya adalah concurrency. Namun karena sekarang kita mer-run aplikasi golang di multicore, jadi sebenarnya dia capuran antara concurrency dan parallel.
+karena Golang support multicore, artinya selain concurrency dia juga support parallel programming
+
+Concurrency :
+- Contoh concurrency :
+	- Saat kita makan di cafe, kita bisa makan, lalu ngobrol, lalu minum, makan lagi, ngobrol lagi, minum lagi, dan seterusnya. Tetapi kita tidak bisa pada saat yang bersamaan minum, makan dan ngobrol, hanya bisa melakukan satu hal pada satu waktu, namun bisa berganti kapanpun kita mau.
+
+CPU-bound :
+- Banyak algoritma yang dibuat hanya membutuhkan CPU untuk menjalankannya. Algoritma jenis ini biasanya sangat tergantung dengan kecepatan CPU.
+- Contoh yang paling populer adalah Machine Learning, oleh karena itu sekarang banyak sekali teknologi Machine Learning yang banyak menggunakan GPU karena memiliki core yang lebih banyak dibanding CPU biasanya.
+- Jenis algoritma seperti ini benefit menggunakan Concurrency Programming itu tidak ada, namun bisa dibantu dengan implementasi Parallel Programming.
+
+I/O-bound :
+- I/O-bound adalah kebalikan dari sebelumnya, dimana biasanya algoritma atau aplikasinya sangat tergantung dengan kecepatan input output devices yang digunakan. 
+- Contohnya aplikasi seperti membaca data dari file, database, dan lain-lain.
+- Kebanyakan saat ini, biasanya kita akan membuat aplikasi jenis seperti ini.
+- Aplikasi jenis I/O-bound, walaupun bisa terbantu dengan implementasi Parallel Programming, tapi benefitnya akan lebih baik jika menggunakan Concurrency Programming.
+- Bayangkan kita membaca data dari database, dan Thread harus menunggu 1 detik untuk mendapat balasan dari database, padahal waktu 1 detik itu jika menggunakan Concurrency Programming, bisa digunakan untuk melakukan hal lain lagi
+
+Pelajari Blocking dan Non Blocking, kalu tidak salah golang dengan concurrency (goroutines) bisa dibilang non blocking, tolong eksplore sendiri nanti
