@@ -34,3 +34,4 @@ Pelajari Blocking dan Non Blocking, kalu tidak salah golang dengan concurrency (
 - Goroutine Sangat Ringan : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?pli=1&slide=id.gb51031e0c2_0_493#slide=id.gb51031e0c2_0_493
 - Pengenalan Channel : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?pli=1&slide=id.gb51031e0c2_0_539#slide=id.gb51031e0c2_0_539
 - Membuat Channel : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?pli=1&slide=id.gb51031e0c2_0_554#slide=id.gb51031e0c2_0_554
+- Channel Sebagai Parameter : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?pli=1&slide=id.gb51031e0c2_0_630#slide=id.gb51031e0c2_0_630
