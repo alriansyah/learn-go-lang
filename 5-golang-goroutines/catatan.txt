@@ -30,3 +30,5 @@ I/O-bound :
 - Bayangkan kita membaca data dari database, dan Thread harus menunggu 1 detik untuk mendapat balasan dari database, padahal waktu 1 detik itu jika menggunakan Concurrency Programming, bisa digunakan untuk melakukan hal lain lagi
 
 Pelajari Blocking dan Non Blocking, kalu tidak salah golang dengan concurrency (goroutines) bisa dibilang non blocking, tolong eksplore sendiri nanti
+
+- Goroutine Sangat Ringan : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?pli=1&slide=id.gb51031e0c2_0_493#slide=id.gb51031e0c2_0_493
