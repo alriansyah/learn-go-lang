@@ -37,3 +37,4 @@ Pelajari Blocking dan Non Blocking, kalu tidak salah golang dengan concurrency (
 - Channel Sebagai Parameter : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?pli=1&slide=id.gb51031e0c2_0_630#slide=id.gb51031e0c2_0_630
 - Channel In dan Out : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?pli=1&slide=id.gb51031e0c2_0_659#slide=id.gb51031e0c2_0_659
 - Buffered Channel : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?pli=1&slide=id.gb51031e0c2_0_558#slide=id.gb51031e0c2_0_558
+- Range Channel : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?pli=1&slide=id.gb51031e0c2_0_562#slide=id.gb51031e0c2_0_562
