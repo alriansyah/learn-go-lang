@@ -38,3 +38,8 @@ Pelajari Blocking dan Non Blocking, kalu tidak salah golang dengan concurrency (
 - Channel In dan Out : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?pli=1&slide=id.gb51031e0c2_0_659#slide=id.gb51031e0c2_0_659
 - Buffered Channel : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?pli=1&slide=id.gb51031e0c2_0_558#slide=id.gb51031e0c2_0_558
 - Range Channel : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?pli=1&slide=id.gb51031e0c2_0_562#slide=id.gb51031e0c2_0_562
+- Select Channel : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?slide=id.gb51031e0c2_0_566#slide=id.gb51031e0c2_0_566
+	- Kadang ada kasus dimana kita membuat beberapa channel, dan menjalankan beberapa goroutine
+	- Lalu kita ingin mendapatkan data dari semua channel tersebut
+	- Untuk melakukan hal tersebut, kita bisa menggunakan select channel di Go-Lang
+	- Dengan select channel, kita bisa memilih data tercepat dari beberapa channel, jika data datang secara bersamaan di beberapa channel, maka akan dipilih secara random
