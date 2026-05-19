@@ -43,3 +43,8 @@ Pelajari Blocking dan Non Blocking, kalu tidak salah golang dengan concurrency (
 	- Lalu kita ingin mendapatkan data dari semua channel tersebut
 	- Untuk melakukan hal tersebut, kita bisa menggunakan select channel di Go-Lang
 	- Dengan select channel, kita bisa memilih data tercepat dari beberapa channel, jika data datang secara bersamaan di beberapa channel, maka akan dipilih secara random
+- Default Select : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?slide=id.gb51031e0c2_0_570#slide=id.gb51031e0c2_0_570
+	- Apa yang terjadi jika kita melakukan select terhadap channel yang ternyata tidak ada datanya?
+	- Maka kita akan menunggu sampai data ada
+	- Kadang mungkin kita ingin melakukan sesuatu jika misal semua channel tidak ada datanya ketika kita melakukan select channel
+	- Dalam select, kita bisa menambahkan default, dimana ini akan dieksekusi jika memang di semua channel yang kita select tidak ada datanya
