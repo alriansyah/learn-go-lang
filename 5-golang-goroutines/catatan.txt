@@ -48,3 +48,7 @@ Pelajari Blocking dan Non Blocking, kalu tidak salah golang dengan concurrency (
 	- Maka kita akan menunggu sampai data ada
 	- Kadang mungkin kita ingin melakukan sesuatu jika misal semua channel tidak ada datanya ketika kita melakukan select channel
 	- Dalam select, kita bisa menambahkan default, dimana ini akan dieksekusi jika memang di semua channel yang kita select tidak ada datanya
+- Race Condition : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?slide=id.gb51031e0c2_0_722#slide=id.gb51031e0c2_0_722
+	- Saat kita menggunakan goroutine, dia tidak hanya berjalan secara concurrent, tapi bisa parallel juga, karena bisa ada beberapa thread yang berjalan secara parallel
+	- Hal ini sangat berbahaya ketika kita melakukan manipulasi data variable yang sama oleh beberapa goroutine secara bersamaan
+	- Hal ini bisa menyebabkan masalah yang namanya Race Condition
