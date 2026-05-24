@@ -86,3 +86,14 @@ Pelajari Blocking dan Non Blocking, kalu tidak salah golang dengan concurrency (
 	- Pool adalah implementasi design pattern bernama object pool pattern. 
 	- Sederhananya, design pattern Pool ini digunakan untuk menyimpan data, selanjutnya untuk menggunakan datanya, kita bisa mengambil dari Pool, dan setelah selesai menggunakan datanya, kita bisa menyimpan kembali ke Pool nya
 	- Implementasi Pool di Go-Lang ini sudah aman dari problem race condition
+- sync.Map : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?slide=id.gb51031e0c2_0_578#slide=id.gb51031e0c2_0_578
+	Map :
+	- Go-Lang memiliki sebuah struct beranama sync.Map
+	- Map ini mirip Go-Lang map, namun yang membedakan, Map ini aman untuk menggunaan concurrent menggunakan goroutine, aman dari race condition
+	- Ada beberapa function yang bisa kita gunakan di Map :
+		- Store(key, value) untuk menyimpan data ke Map
+		- Load(key) untuk mengambil data dari Map menggunakan key
+		- Delete(key) untuk menghapus data di Map menggunakan key
+		- Range(function(key, value)) digunakan untuk melakukan iterasi seluruh data di Map
+
+
