@@ -81,3 +81,8 @@ Pelajari Blocking dan Non Blocking, kalu tidak salah golang dengan concurrency (
 	- Once adalah fitur di Go-Lang yang bisa kita gunakan untuk memastikan bahwa sebuah function di eksekusi hanya sekali
 	- Jadi berapa banyak pun goroutine yang mengakses, bisa dipastikan bahwa goroutine yang pertama yang bisa mengeksekusi function nya
 	- Goroutine yang lain akan di hiraukan, artinya function tidak akan dieksekusi lagi
+- sync.Pool : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?slide=id.gb51031e0c2_0_590#slide=id.gb51031e0c2_0_590
+	Pool :
+	- Pool adalah implementasi design pattern bernama object pool pattern. 
+	- Sederhananya, design pattern Pool ini digunakan untuk menyimpan data, selanjutnya untuk menggunakan datanya, kita bisa mengambil dari Pool, dan setelah selesai menggunakan datanya, kita bisa menyimpan kembali ke Pool nya
+	- Implementasi Pool di Go-Lang ini sudah aman dari problem race condition
