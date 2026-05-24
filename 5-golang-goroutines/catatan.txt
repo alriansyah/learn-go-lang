@@ -52,7 +52,7 @@ Pelajari Blocking dan Non Blocking, kalu tidak salah golang dengan concurrency (
 	- Saat kita menggunakan goroutine, dia tidak hanya berjalan secara concurrent, tapi bisa parallel juga, karena bisa ada beberapa thread yang berjalan secara parallel
 	- Hal ini sangat berbahaya ketika kita melakukan manipulasi data variable yang sama oleh beberapa goroutine secara bersamaan
 	- Hal ini bisa menyebabkan masalah yang namanya Race Condition
-- sync.Mutex :
+- sync.Mutex : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?slide=id.gb51031e0c2_0_760#slide=id.gb51031e0c2_0_760
 	Mutex (Mutual Exclusion) :
 	- Untuk mengatasi masalah race condition tersebut, di Go-Lang terdapat sebuah struct bernama sync.Mutex
 	- Mutex bisa digunakan untuk melakukan locking dan unlocking, dimana ketika kita melakukan locking terhadap mutex, maka tidak ada yang bisa melakukan locking lagi sampai kita melakukan unlock
@@ -60,19 +60,24 @@ Pelajari Blocking dan Non Blocking, kalu tidak salah golang dengan concurrency (
 	- Ini sangat cocok sebagai solusi ketika ada masalah race condition yang sebelumnya kita hadapi
 	- Mutex dibutuhkan ketika asa salah satu variable yang di sharing / yang diakses oleh beberapa goroutine
 	- Ini aman dari race condition, namun agak lambat
-- sync.RWMutex :
+- sync.RWMutex : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?slide=id.gb51031e0c2_0_586#slide=id.gb51031e0c2_0_586
 	RWMutex (Read Write Mutex) :
 	- Kadang ada kasus dimana kita ingin melakukan locking tidak hanya pada proses mengubah data, tapi juga membaca data
 	- Kita sebenarnya bisa menggunakan Mutex saja, namun masalahnya nanti akan rebutan antara proses membaca dan mengubah
 	- Di Go-Lang telah disediakan struct RWMutex (Read Write Mutex) untuk menangani hal ini, dimana Mutex jenis ini memiliki dua lock, lock untuk Read dan lock untuk Write
-- Deadlock :
+- Deadlock : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?slide=id.gb51031e0c2_0_574#slide=id.gb51031e0c2_0_574
 	- Hati-hati saat membuat aplikasi yang parallel atau concurrent, masalah yang sering kita hadapi adalah Deadlock
 	- Deadlock adalah keadaan dimana sebuah proses goroutine saling menunggu lock sehingga tidak ada satupun goroutine yang bisa jalan
 	- Sekarang kita coba simulasikan proses deadlock
-- sync.WaitGroup :
+- sync.WaitGroup : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?slide=id.gb51031e0c2_0_785#slide=id.gb51031e0c2_0_785
 	WaitGroup :
 	- WaitGroup adalah fitur yang bisa digunakan untuk menunggu sebuah proses selesai dilakukan
 	- Hal ini kadang diperlukan, misal kita ingin menjalankan beberapa proses menggunakan goroutine, tapi kita ingin semua proses selesai terlebih dahulu sebelum aplikasi kita selesai
 	- Kasus seperti ini bisa menggunakan WaitGroup
 	- Untuk menandai bahwa ada proses goroutine, kita bisa menggunakan method Add(int), setelah proses goroutine selesai, kita bisa gunakan method Done()
 	- Untuk menunggu semua proses selesai, kita bisa menggunakan method Wait()
+- sync.Once : https://docs.google.com/presentation/d/1A78dn_g6HfxfRor9XBUAGPQM9vT6_SnrQGrQ2z0myOo/edit?slide=id.gb51031e0c2_0_810#slide=id.gb51031e0c2_0_810
+	Once :
+	- Once adalah fitur di Go-Lang yang bisa kita gunakan untuk memastikan bahwa sebuah function di eksekusi hanya sekali
+	- Jadi berapa banyak pun goroutine yang mengakses, bisa dipastikan bahwa goroutine yang pertama yang bisa mengeksekusi function nya
+	- Goroutine yang lain akan di hiraukan, artinya function tidak akan dieksekusi lagi
