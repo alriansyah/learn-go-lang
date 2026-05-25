@@ -14,4 +14,15 @@
     - Context direpresentasikan di dalam sebuah interface Context
     - interface Context terdapat dalam package context
     - https://golang.org/pkg/context/
+- Membuat Context : https://docs.google.com/presentation/d/1WhJvRpKPWq7LY9P6fMN93vkjKa1bJwBQebbieKdefPw/edit?slide=id.gba36251cad_0_267#slide=id.gba36251cad_0_267
+    Membuat Context :
+    - Karena Context adalah sebuah interface, untuk membuat context kita butuh sebuah struct yang sesuai dengan kontrak interface Context
+    - Namun kita tidak perlu membuatnya secara manual
+    - Di Golang package context terdapat function yang bisa kita gunakan untuk membuat Context
+
+    Function Membuat Context :
+    - context.Background() : Membuat context kosong. Tidak pernah dibatalkan, tidak pernah timeout, dan tidak memiliki value apapun. Biasanya digunakan di main function atau dalam test, atau dalam awal proses request terjadi.
+    - context.TODO() : Membuat context kosong seperti Background(), namun biasanya menggunakan ini ketika belum jelas context apa yang ingin digunakan
+
+
 
