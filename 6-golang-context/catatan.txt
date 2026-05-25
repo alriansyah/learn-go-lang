@@ -60,3 +60,9 @@
     - Namun ingat, goroutine yang menggunakan context, tetap harus melakukan pengecekan terhadap context nya, jika tidak, tidak ada gunanya
     - Untuk membuat context dengan cancel signal, kita bisa menggunakan function context.WithCancel(parent)
     - Dapat digunakan untuk memastikan tidak ada goroutine leak, memastikan semua goroutine akan bereaksi ketika menerima sinya cancel
+- Context With Timeout : https://docs.google.com/presentation/d/1WhJvRpKPWq7LY9P6fMN93vkjKa1bJwBQebbieKdefPw/edit?slide=id.gba36251cad_0_275#slide=id.gba36251cad_0_275
+    Context With Timeout :
+    - Selain menambahkan value ke context, dan juga sinyal cancel, kita juga bisa menambahkan sinyal cancel ke context secara otomatis dengan menggunakan pengaturan timeout
+    - Dengan menggunakan pengaturan timeout, kita tidak perlu melakukan eksekusi cancel secara manual, cancel akan otomatis di eksekusi jika waktu timeout sudah terlewati
+    - Penggunaan context dengan timeout sangat cocok ketika misal kita melakukan query ke database atau http api, namun ingin menentukan batas maksimal timeout nya
+    - Untuk membuat context dengan cancel signal secara otomatis menggunakan timeout, kita bisa menggunakan function context.WithTimeout(parent, duration)
