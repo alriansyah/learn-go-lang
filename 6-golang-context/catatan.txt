@@ -43,3 +43,10 @@
 
     Cara Membuat Child Context :
     - Cara membuat child context ada banyak caranya, yang akan kita bahas di materi-materi selanjutnya
+- Context With Value : https://docs.google.com/presentation/d/1WhJvRpKPWq7LY9P6fMN93vkjKa1bJwBQebbieKdefPw/edit?slide=id.gba36251cad_0_340#slide=id.gba36251cad_0_340
+    Context With Value :
+    - Pada saat awal membuat context, context tidak memiliki value
+    - Kita bisa menambah sebuah value dengan data Pair (key - value) ke dalam context
+    - Saat kita menambah value ke context, secara otomatis akan tercipta child context baru, artinya original context nya tidak akan berubah sama sekali
+    - Untuk membuat menambahkan value ke context, kita bisa menggunakan function context.WithValue(parent, key, value)
+    - saat mengkases value itu dari child ke parent, A->B->C->D : D bisa akses value keatas, A tidak bisa lihat value yang dimiliki child. context itu nanyanya ke atas
