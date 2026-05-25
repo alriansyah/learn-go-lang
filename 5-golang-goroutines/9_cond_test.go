@@ -24,12 +24,13 @@ func WaitCondition(value int) {
 func TestCond(t *testing.T) {
 	for i := 0; i < 10; i++ {
 		go WaitCondition(i)
+		// 10 goroutine tertidur di cond.Wait()
 	}
 
 	go func() {
 		for i := 0; i < 10; i++ {
-			time.Sleep(1 * time.Second)
-			cond.Signal()
+			time.Sleep(1 * time.Second) // Tunggu 1 detik
+			cond.Signal()               // Bangunkan 1 goroutine (FIFO)
 		}
 	}()
 
