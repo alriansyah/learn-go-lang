@@ -50,3 +50,13 @@
     - Saat kita menambah value ke context, secara otomatis akan tercipta child context baru, artinya original context nya tidak akan berubah sama sekali
     - Untuk membuat menambahkan value ke context, kita bisa menggunakan function context.WithValue(parent, key, value)
     - saat mengkases value itu dari child ke parent, A->B->C->D : D bisa akses value keatas, A tidak bisa lihat value yang dimiliki child. context itu nanyanya ke atas
+    - ingat!, ketika membuat value baru maka ia akan menjadi context child baru
+- Context With Cancel : https://docs.google.com/presentation/d/1WhJvRpKPWq7LY9P6fMN93vkjKa1bJwBQebbieKdefPw/edit?slide=id.gba36251cad_0_271#slide=id.gba36251cad_0_271
+    Context With Cancel :
+    - Selain menambahkan value ke context, kita juga bisa menambahkan sinyal cancel ke context
+    - Kapan sinyal cancel diperlukan dalam context?
+    - Biasanya ketika kita butuh menjalankan proses lain, dan kita ingin bisa memberi sinyal cancel ke proses tersebut
+    - Biasanya proses ini berupa goroutine yang berbeda, sehingga dengan mudah jika kita ingin membatalkan eksekusi goroutine, kita bisa mengirim sinyal cancel ke context nya
+    - Namun ingat, goroutine yang menggunakan context, tetap harus melakukan pengecekan terhadap context nya, jika tidak, tidak ada gunanya
+    - Untuk membuat context dengan cancel signal, kita bisa menggunakan function context.WithCancel(parent)
+    - Dapat digunakan untuk memastikan tidak ada goroutine leak, memastikan semua goroutine akan bereaksi ketika menerima sinya cancel
