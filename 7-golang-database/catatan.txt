@@ -34,4 +34,8 @@ Go-Lang Database MySQL : https://docs.google.com/presentation/d/15pvN3L3HTgA9aIM
     - (DB) SetMaxOpenConns(number) : Pengaturan berapa jumlah koneksi maksimal yang dibuat
     - (DB) SetConnMaxIdleTime(duration) : Pengaturan berapa lama koneksi yang sudah tidak digunakan akan dihapus
     - (DB) SetConnMaxLifetime(duration) : Pengaturan berapa lama koneksi boleh digunakan
-
+- Eksekusi Perintah SQL : https://docs.google.com/presentation/d/15pvN3L3HTgA9aIMNkm03PzzIwlff0WDE6hOWWut9pg8/edit?slide=id.gbcfff2dc3b_0_16#slide=id.gbcfff2dc3b_0_16
+    Eksekusi Perintah SQL :
+    - Saat membuat aplikasi menggunakan database, sudah pasti kita ingin berkomunikasi dengan database menggunakan perintah SQL
+    - Di Golang juga menyediakan function yang bisa kita gunakan untuk mengirim perintah SQL ke database menggunakan function (DB) ExecContext(context, sql, params)
+    - Ketika mengirim perintah SQL, kita butuh mengirimkan context, dan seperti yang sudah pernah kita pelajari di course Golang Context, dengan context, kita bisa mengirim sinyal cancel jika kita ingin membatalkan pengiriman perintah SQL nya
