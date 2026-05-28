@@ -22,3 +22,16 @@ Go-Lang Database MySQL : https://docs.google.com/presentation/d/15pvN3L3HTgA9aIM
     - username:password@tcp(host:port)/database_name
     - Jika sudah terbuat maka akan menghaslakan object sql.DB (struct dan object berupa pointer)
     - Jika object sql.DB sudah tidak digunakan lagi, disarankan untuk menutupnya menggunakan function Close()
+- Database Pooling : https://docs.google.com/presentation/d/15pvN3L3HTgA9aIMNkm03PzzIwlff0WDE6hOWWut9pg8/edit?slide=id.gbbaf426c8a_0_399#slide=id.gbbaf426c8a_0_399
+    Database Pooling :
+    - sql.DB di Golang sebenarnya bukanlah sebuah koneksi ke database
+    - Melainkan sebuah pool ke database, atau dikenal dengan konsep Database Pooling, database pooling isinya adalah kumpulan dari koneksi
+    - Di dalam sql.DB, Golang melakukan management koneksi ke database secara otomatis. Hal ini menjadikan kita tidak perlu melakukan management koneksi database secara manual
+    - Dengan kemampuan database pooling ini, kita bisa menentukan jumlah minimal dan maksimal koneksi yang dibuat oleh Golang, sehingga tidak membanjiri koneksi ke database, karena biasanya ada batas maksimal koneksi yang bisa ditangani oleh database yang kita gunakan
+
+    Pengaturan Database Pooling (Method dan Keterangan) :
+    - (DB) SetMaxIdleConns(number) : Pengaturan berapa jumlah koneksi minimal yang dibuat
+    - (DB) SetMaxOpenConns(number) : Pengaturan berapa jumlah koneksi maksimal yang dibuat
+    - (DB) SetConnMaxIdleTime(duration) : Pengaturan berapa lama koneksi yang sudah tidak digunakan akan dihapus
+    - (DB) SetConnMaxLifetime(duration) : Pengaturan berapa lama koneksi boleh digunakan
+
