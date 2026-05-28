@@ -1,0 +1,10 @@
+Go-Lang Database MySQL : https://docs.google.com/presentation/d/15pvN3L3HTgA9aIMNkm03PzzIwlff0WDE6hOWWut9pg8/edit?slide=id.p#slide=id.p
+- Pengenalan Package Database : https://docs.google.com/presentation/d/15pvN3L3HTgA9aIMNkm03PzzIwlff0WDE6hOWWut9pg8/edit?slide=id.gbbaf426c8a_0_264#slide=id.gbbaf426c8a_0_264
+    Pengenalan Package Database :
+    - Bahasa pemrograman Go-Lang secara default memiliki sebuah package bernama database
+    - Package database adalah package yang berisikan kumpulan standard interface yang menjadi standard untuk berkomunikasi ke database
+    - Hal ini menjadikan kode program yang kita buat untuk mengakses jenis database apapun bisa menggunakan kode yang sama
+    - Yang berbeda hanya kode SQL yang perlu kita gunakan sesuai dengan database yang kita gunakan
+
+    Cara Kerja Package Database :
+    - Aplikasi --call-> Database Interface --call-> Database Driver --call-> DBMS
