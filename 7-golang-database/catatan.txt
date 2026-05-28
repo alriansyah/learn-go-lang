@@ -8,3 +8,8 @@ Go-Lang Database MySQL : https://docs.google.com/presentation/d/15pvN3L3HTgA9aIM
 
     Cara Kerja Package Database :
     - Aplikasi --call-> Database Interface --call-> Database Driver --call-> DBMS
+- Menambah Database Driver : https://docs.google.com/presentation/d/15pvN3L3HTgA9aIMNkm03PzzIwlff0WDE6hOWWut9pg8/edit?slide=id.gbbaf426c8a_0_361#slide=id.gbbaf426c8a_0_361
+    Database Driver :
+    - Sebelum kita membuat kode program menggunakan database di Go-Lang, terlebih dahulu kita wajib menambahkan driver database nya
+    - Tanpa driver database, maka package database di Go-Lang tidak mengerti apapun, karena hanya berisi kontrak interface saja
+    - https://golang.org/s/sqldrivers 
