@@ -50,3 +50,32 @@ Go-Lang Database MySQL : https://docs.google.com/presentation/d/15pvN3L3HTgA9aIM
     - Kita bisa menggunakan function (Rows) Next() (boolean) untuk melakukan iterasi terhadap data hasil query, jika return data false, artinya sudah tidak ada data lagi didalam result
     - Untuk membaca tiap data, kita bisa menggunakan (Rows) Scan(columns...)
     - Dan jangan lupa, setelah menggunakan Rows, jangan lupa untuk menutupnya menggunakan (Rows) Close()
+- Tipe Data Column : https://docs.google.com/presentation/d/15pvN3L3HTgA9aIMNkm03PzzIwlff0WDE6hOWWut9pg8/edit?slide=id.gbcfff2dc3b_0_44#slide=id.gbcfff2dc3b_0_44
+    Tipe Data Column :
+    - Sebelumnya kita hanya membuat table dengan tipe data di kolom nya berupa VARCHAR
+    - Untuk VARCHAR di database, biasanya kita gunakan String di Golang
+    - Bagaimana dengan tipe data yang lain?
+    - Apa representasinya di Golang, misal tipe data timestamp, date dan lain-lain
+
+    Mapping Tipe Data :
+    - VARCHAR, CHAR : string
+    - INT, BIGINT : int32, int64
+    - FLOAT, DOUBLE : float32, float64
+    - BOOLEAN : bool
+    - DATE, DATETIME, TIME, TIMESTAMP : time.Time
+
+    Error Tipe Data Date :
+    - Secara default, Driver MySQL untuk Golang akan melakukan query tipe data DATE, DATETIME, TIMESTAMP menjadi []byte / []uint8. Dimana ini bisa dikonversi menjadi String, lalu di parsing menjadi time.Time
+    - Namun hal ini merepotkan jika dilakukan manual, kita bisa meminta Driver MySQL untuk Golang secara otomatis melakukan parsing dengan menambahkan parameter parseDate=true
+
+    Nullable Type :
+    - Golang database tidak mengerti dengan tipe data NULL di database
+    - Oleh karena itu, khusus untuk kolom yang bisa NULL di database, akan jadi masalah jika kita melakukan Scan secara bulat-bulat menggunakan tipe data representasinya di Golang
+
+    Tipe Data Nullable :
+    - string : database/sql.NullString
+    - bool : database/sql.NullBool
+    - float64 : database/sql.NullFloat64
+    - int32 : database/sql.NullInt32
+    - int64 : database/sql.NullInt64
+    - time.Time : database/sql.NullTime
