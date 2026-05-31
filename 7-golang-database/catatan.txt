@@ -136,5 +136,18 @@ Go-Lang Database MySQL : https://docs.google.com/presentation/d/15pvN3L3HTgA9aIM
     - Untuk memulai transaksi, kita bisa menggunakan function (DB) Begin(), dimana akan menghasilkan struct Tx yang merupakan representasi Transaction
     - Struct Tx ini yang kita gunakan sebagai pengganti DB untuk melakukan transaksi, dimana hampir semua function di DB ada di Tx, seperti Exec, Query atau Prepare
     - Setelah selesai proses transaksi, kita bisa gunakan function (Tx) Commit() untuk melakukan commit atau Rollback()
+- Repository Pattern : https://docs.google.com/presentation/d/15pvN3L3HTgA9aIMNkm03PzzIwlff0WDE6hOWWut9pg8/edit?slide=id.gbcfff2dc3b_0_407#slide=id.gbcfff2dc3b_0_407
+    Repository Pattern :
+    - Dalam buku Domain-Driven Design, Eric Evans menjelaskan bahwa “repository is a mechanism for encapsulating storage, retrieval, and search behavior, which emulates a collection of objects”
+    - Pattern Repository ini biasanya digunakan sebagai jembatan antar business logic aplikasi kita dengan semua perintah SQL ke database
+    - Jadi semua perintah SQL akan ditulis di Repository, sedangkan business logic kode program kita hanya cukup menggunakan Repository tersebut
 
+    Diagram Repository Pattern : https://docs.google.com/presentation/d/15pvN3L3HTgA9aIMNkm03PzzIwlff0WDE6hOWWut9pg8/edit?slide=id.gbcfff2dc3b_0_559#slide=id.gbcfff2dc3b_0_559
 
+    Entity / Model :
+    - Dalam pemrograman berorientasi object, biasanya sebuah tabel di database akan selalu dibuat representasinya sebagai class Entity atau Model, namun di Golang, karena tidak mengenal Class, jadi kita akan representasikan data dalam bentuk Struct
+    - Ini bisa mempermudah ketika membuat kode program
+    - Misal ketika kita query ke Repository, dibanding mengembalikan array, alangkah baiknya Repository melakukan konversi terlebih dahulu ke struct Entity / Model, sehingga kita tinggal menggunakan objectnya saja
+
+    - Biasanya repository itu : 1 tabel 1 repository
+    - Repository biasanya cuma kontrak. Kalo di golang menggunakan interface
