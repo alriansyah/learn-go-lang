@@ -74,7 +74,7 @@ func TestQuerySqlComplex(t *testing.T) {
 		err = rows.Scan(&id, &name, &email, &balance, &rating, &birthDate, &married, &createdAt)
 		if err != nil {
 			panic(err)
-			
+
 		}
 		fmt.Println("================")
 		fmt.Println("Id:", id)
@@ -89,5 +89,35 @@ func TestQuerySqlComplex(t *testing.T) {
 		}
 		fmt.Println("Married:", married)
 		fmt.Println("Created At:", createdAt)
+	}
+}
+
+func TestSqlInjection(t *testing.T) {
+	db := GetConnection()
+	defer db.Close()
+
+	ctx := context.Background()
+
+	username := "admin'; #"
+	password := "salah"
+
+	script := "SELECT username FROM users WHERE username = '" + username +
+		"' AND password = '" + password + "' LIMIT 1"
+	fmt.Println(script)
+	rows, err := db.QueryContext(ctx, script)
+	if err != nil {
+		panic(err)
+	}
+	defer rows.Close()
+
+	if rows.Next() {
+		var username string
+		err := rows.Scan(&username)
+		if err != nil {
+			panic(err)
+		}
+		fmt.Println("Sukses Login", username)
+	} else {
+		fmt.Println("Gagal Login")
 	}
 }
