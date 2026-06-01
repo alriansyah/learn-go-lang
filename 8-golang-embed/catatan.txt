@@ -31,7 +31,15 @@
     - https://golang.org/pkg/path/#Match
 
     ref: https://docs.google.com/presentation/d/1d7NZMrQwDvwRYZzqVgQKOAPuw_f7HEcIQdI6Rfvd2G4/edit?slide=id.gc9fdc3afe8_0_39#slide=id.gc9fdc3afe8_0_39
+- Hasil Embed di Compile : https://docs.google.com/presentation/d/1d7NZMrQwDvwRYZzqVgQKOAPuw_f7HEcIQdI6Rfvd2G4/edit?slide=id.gc9fc6930f6_0_377#slide=id.gc9fc6930f6_0_377
+    Hasil Embed di Compile :
+    - Perlu diketahui, bahwa hasil embed yang dilakukan oleh package embed adalah permanent dan data file yang dibaca disimpan dalam binary file golang nya
+    - Artinya bukan dilakukan secara realtime membaca file yang ada diluar
+    - Hal ini menjadikan jika binary file golang sudah di compile, kita tidak butuh lagi file external nya, dan bahkan jika diubah file external nya, isi variable nya tidak akan berubah lagi
 
+    Compile :
+    - go build
+    - untuk run : .\golang_embed.exe
 
 
 
