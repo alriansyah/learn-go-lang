@@ -8,5 +8,10 @@
     - Untuk melakukan embed file ke variable, kita bisa mengimport package embed terlebih dahulu
     - Selajutnya kita bisa tambahkan komentar //go:embed diikuti dengan nama file nya, diatas variable yang kita tuju
     - Variable yang dituju tersebut nanti secara otomatis akan berisi konten file yang kita inginkan secara otomatis ketika kode golang di compile
-    - Variable yang dituju tidak bisa disimpan di dalam functio
+    - Variable yang dituju tidak bisa disimpan di dalam function
+- Embed File ke String : https://docs.google.com/presentation/d/1d7NZMrQwDvwRYZzqVgQKOAPuw_f7HEcIQdI6Rfvd2G4/edit?slide=id.gc9fc6930f6_0_361#slide=id.gc9fc6930f6_0_361
+    Embed File ke String : 
+    - Embed file bisa kita lakukan ke variable dengan tipe data string
+    - Secara otomatis isi file akan dibaca sebagai text dan masukkan ke variable tersebu
+
 
