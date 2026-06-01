@@ -1,2 +1,5 @@
 - Pengenalan Web : https://docs.google.com/presentation/d/1h_8nk-Ani4SykMq5lhgubzdtAtZfzPce7FHUuAKlwmE/edit?slide=id.gcc1ac15dc4_0_267#slide=id.gcc1ac15dc4_0_267
 - Client dan Server : https://docs.google.com/presentation/d/1h_8nk-Ani4SykMq5lhgubzdtAtZfzPce7FHUuAKlwmE/edit?slide=id.gcc1ac15dc4_0_308#slide=id.gcc1ac15dc4_0_308
+- Go-Lang Web : https://docs.google.com/presentation/d/1h_8nk-Ani4SykMq5lhgubzdtAtZfzPce7FHUuAKlwmE/edit?slide=id.gcc1ac15dc4_0_263#slide=id.gcc1ac15dc4_0_263
+    Catatan tambahan :
+    - Di golang, didalamnya sudah tersedia web server. Sehingga kitak tidak perlu install web server tambahan seperti nginx, apache httpd
