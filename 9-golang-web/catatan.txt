@@ -1,1 +1,2 @@
 - Pengenalan Web : https://docs.google.com/presentation/d/1h_8nk-Ani4SykMq5lhgubzdtAtZfzPce7FHUuAKlwmE/edit?slide=id.gcc1ac15dc4_0_267#slide=id.gcc1ac15dc4_0_267
+- Client dan Server : https://docs.google.com/presentation/d/1h_8nk-Ani4SykMq5lhgubzdtAtZfzPce7FHUuAKlwmE/edit?slide=id.gcc1ac15dc4_0_308#slide=id.gcc1ac15dc4_0_308
