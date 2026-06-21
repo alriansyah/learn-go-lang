@@ -320,7 +320,21 @@
     - Sebenarnya di Go-Lang sudah disediakan menggunakan FileServer dan ServeFile
     - Dan jika kita ingin memaksa file di download (tanpa di render oleh browser, kita bisa menggunakan header Content-Disposition)
     - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition 
+- Middleware : https://docs.google.com/presentation/d/1h_8nk-Ani4SykMq5lhgubzdtAtZfzPce7FHUuAKlwmE/edit?slide=id.gd44b5e7ec0_0_31#slide=id.gd44b5e7ec0_0_31
+    Middleware :
+    - Dalam pembuatan web, ada konsep yang bernama middleware atau filter atau interceptor
+    - Middleware adalah sebuah fitur dimana kita bisa menambahkan kode sebelum dan setelah sebuah handler di eksekusi
 
+    Diagram Middleware : https://docs.google.com/presentation/d/1h_8nk-Ani4SykMq5lhgubzdtAtZfzPce7FHUuAKlwmE/edit?slide=id.gd44b5e7ec0_0_810#slide=id.gd44b5e7ec0_0_810
+
+    Middleware di Go-Lang web :
+    - Sayangnya, di Go-Lang web tidak ada middleware
+    - Namun karena struktur handler yang dibuat di golang itu menggunakan interface, jadi kita bisa membuat middleware sendiri menggunakan handler
+
+    Error Handler : 
+    - Kadang middleware juga biasa digunakan untuk melakukan error handler
+    -Hal ini sehingga jika terjadi panic di Handler, kita bisa melakukan recover di middleware, dan mengubah panic tersebut menjadi error response
+    -Dengan ini, kita bisa menjaga aplikasi kita tidak berhenti berjalan
 
 
 
