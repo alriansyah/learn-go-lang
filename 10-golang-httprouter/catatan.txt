@@ -1,0 +1,11 @@
+- Pengenalan HttpRouter : https://docs.google.com/presentation/d/1RaRkNSeaXopQXODvOANJiNyQ8ECg8QYJE8RvVrrjedg/edit?pli=1&slide=id.ge0566e8a90_0_426#slide=id.ge0566e8a90_0_426
+    Pengenalan HttpRouter :
+    - HttpRouter merupakan salah satu OpenSource Library yang populer untuk Http Handler di Go-Lang
+    - HttpRouter terkenal dengan kecepatannya dan juga sangat minimalis
+    - Hal ini dikarenakan HttpRouter hanya memiliki fitur untuk routing saja, tidak memiliki fitur apapun selain itu
+    - https://github.com/julienschmidt/httprouter 
+
+    Menambah HttpRouter ke Project :
+    - go get github.com/julienschmidt/httprouter
+    - go get github.com/stretchr/testify
+
