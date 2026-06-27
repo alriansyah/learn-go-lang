@@ -8,4 +8,8 @@
     Package json :
     - Go-Lang sudah menyediakan package json, dimana kita bisa menggunakan package ini untuk melakukan konversi data ke JSON (encode) atau sebaliknya (decode)
     - https://pkg.go.dev/encoding/json
+- Encode JSON : https://docs.google.com/presentation/d/1mGVdO7Khmiw-9lDmkCWqd9l5_UqohKRkpHbjabRD--U/edit?slide=id.ge81f7990e5_0_282#slide=id.ge81f7990e5_0_282
+    Encode JSON :
+    - Go-Lang telah menyediakan function untuk melakukan konversi data ke JSON, yaitu menggunakan function json.Marshal(interface{})
+    - Karena parameter nya adalah interface{}, maka kita bisa masukan tipe data apapun ke dalam function Marshal
 
