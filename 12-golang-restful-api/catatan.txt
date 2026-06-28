@@ -1,1 +1,242 @@
 https://docs.google.com/presentation/d/1CWDLPYNslBY44Krtzbt-YMntxqocNgMgvrObt5p2uxM/edit?slide=id.p#slide=id.p
+
+Mysql :
+MYSQL CLI & SQL COMMAND CHEATSHEET
+=================================
+
+========================
+MYSQL CLI COMMAND (CMD)
+========================
+
+mysql -u root -p : login ke MySQL
+mysql -u root -p database_name : login langsung ke database tertentu
+mysql --version : cek versi MySQL
+exit : keluar dari MySQL
+quit : keluar dari MySQL
+clear : membersihkan terminal MySQL
+status : melihat status koneksi MySQL
+show databases; : menampilkan semua database
+create database nama_db; : membuat database baru
+drop database nama_db; : menghapus database
+use nama_db; : memilih database aktif
+show tables; : menampilkan semua tabel
+source file.sql : menjalankan file SQL
+tee file.txt : menyimpan output terminal ke file
+notee : menghentikan penyimpanan output
+system cls : membersihkan CMD Windows
+help : melihat bantuan MySQL
+help nama_perintah : melihat bantuan perintah tertentu
+mysqladmin -u root -p version : melihat info server MySQL
+mysqladmin -u root -p ping : cek server aktif atau tidak
+mysqldump -u root -p db_name > backup.sql : backup database
+mysql -u root -p db_name < backup.sql : restore database
+net start mysql : menjalankan service MySQL di Windows
+net stop mysql : menghentikan service MySQL di Windows
+tasklist : melihat proses aktif Windows
+ipconfig : melihat konfigurasi IP Windows
+cls : membersihkan CMD Windows
+cd folder : pindah folder di CMD
+dir : melihat isi folder
+mkdir nama_folder : membuat folder baru
+del file.txt : menghapus file
+copy file1 file2 : menyalin file
+move file1 tujuan : memindahkan file
+echo text : menampilkan text
+ping google.com : cek koneksi jaringan
+shutdown /s : mematikan komputer
+shutdown /r : restart komputer
+
+========================
+DDL (DATA DEFINITION)
+========================
+
+CREATE DATABASE : membuat database baru
+DROP DATABASE : menghapus database
+ALTER DATABASE : mengubah database
+CREATE TABLE : membuat tabel baru
+DROP TABLE : menghapus tabel
+ALTER TABLE : mengubah struktur tabel
+TRUNCATE TABLE : menghapus semua isi tabel tanpa menghapus struktur
+RENAME TABLE : mengganti nama tabel
+CREATE INDEX : membuat index
+DROP INDEX : menghapus index
+CREATE VIEW : membuat view
+DROP VIEW : menghapus view
+CREATE TRIGGER : membuat trigger
+DROP TRIGGER : menghapus trigger
+CREATE PROCEDURE : membuat stored procedure
+DROP PROCEDURE : menghapus stored procedure
+CREATE FUNCTION : membuat function
+DROP FUNCTION : menghapus function
+
+========================
+DML (DATA MANIPULATION)
+========================
+
+SELECT : mengambil data
+INSERT : menambahkan data
+UPDATE : mengubah data
+DELETE : menghapus data
+REPLACE : replace data jika duplicate
+LOAD DATA INFILE : import data dari file
+CALL : menjalankan stored procedure
+
+========================
+DQL (DATA QUERY)
+========================
+
+WHERE : filter data
+ORDER BY : mengurutkan data
+GROUP BY : grouping data
+HAVING : filter hasil grouping
+LIMIT : membatasi jumlah data
+DISTINCT : mengambil data unik
+AS : alias nama kolom/tabel
+LIKE : pencarian pola text
+IN : filter banyak nilai
+BETWEEN : filter rentang nilai
+IS NULL : cek nilai null
+IS NOT NULL : cek nilai tidak null
+UNION : menggabungkan hasil query
+UNION ALL : menggabungkan semua hasil query termasuk duplicate
+JOIN : menggabungkan tabel
+INNER JOIN : mengambil data yang cocok
+LEFT JOIN : mengambil semua data kiri
+RIGHT JOIN : mengambil semua data kanan
+CROSS JOIN : kombinasi semua data
+EXISTS : cek keberadaan data
+ANY : membandingkan dengan salah satu hasil subquery
+ALL : membandingkan dengan semua hasil subquery
+
+========================
+DCL (DATA CONTROL)
+========================
+
+GRANT : memberikan hak akses
+REVOKE : mencabut hak akses
+CREATE USER : membuat user baru
+DROP USER : menghapus user
+ALTER USER : mengubah user
+SET PASSWORD : mengubah password user
+FLUSH PRIVILEGES : reload privilege user
+
+========================
+TCL (TRANSACTION CONTROL)
+========================
+
+START TRANSACTION : memulai transaksi
+COMMIT : menyimpan transaksi
+ROLLBACK : membatalkan transaksi
+SAVEPOINT : membuat titik rollback
+RELEASE SAVEPOINT : menghapus savepoint
+SET AUTOCOMMIT : mengatur autocommit
+
+========================
+TABLE COMMAND
+========================
+
+DESCRIBE nama_tabel; : melihat struktur tabel
+DESC nama_tabel; : shortcut describe tabel
+SHOW CREATE TABLE nama_tabel; : melihat query pembuat tabel
+SHOW COLUMNS FROM nama_tabel; : melihat kolom tabel
+SHOW INDEX FROM nama_tabel; : melihat index tabel
+
+========================
+COLUMN COMMAND
+========================
+
+ADD COLUMN : menambah kolom
+DROP COLUMN : menghapus kolom
+MODIFY COLUMN : mengubah tipe kolom
+CHANGE COLUMN : mengganti nama kolom
+FIRST : memindahkan kolom ke awal
+AFTER : memindahkan kolom setelah kolom tertentu
+
+========================
+CONSTRAINT COMMAND
+========================
+
+PRIMARY KEY : key utama tabel
+FOREIGN KEY : relasi antar tabel
+UNIQUE : memastikan nilai unik
+NOT NULL : kolom wajib isi
+DEFAULT : nilai default kolom
+CHECK : validasi nilai kolom
+AUTO_INCREMENT : increment otomatis
+
+========================
+AGGREGATE FUNCTION
+========================
+
+COUNT() : menghitung jumlah data
+SUM() : menjumlahkan data
+AVG() : menghitung rata-rata
+MIN() : mencari nilai minimum
+MAX() : mencari nilai maksimum
+
+========================
+STRING FUNCTION
+========================
+
+CONCAT() : menggabungkan string
+UPPER() : mengubah text jadi huruf besar
+LOWER() : mengubah text jadi huruf kecil
+LENGTH() : menghitung panjang text
+SUBSTRING() : mengambil sebagian text
+TRIM() : menghapus spasi
+REPLACE() : mengganti text
+
+========================
+DATE FUNCTION
+========================
+
+NOW() : waktu sekarang
+CURDATE() : tanggal hari ini
+CURTIME() : waktu saat ini
+DATE() : mengambil tanggal
+TIME() : mengambil waktu
+YEAR() : mengambil tahun
+MONTH() : mengambil bulan
+DAY() : mengambil hari
+DATEDIFF() : menghitung selisih tanggal
+
+========================
+MATH FUNCTION
+========================
+
+ROUND() : membulatkan angka
+CEIL() : pembulatan ke atas
+FLOOR() : pembulatan ke bawah
+ABS() : nilai absolut
+RAND() : angka random
+
+========================
+UTILITY COMMAND
+========================
+
+SHOW PROCESSLIST; : melihat query aktif
+KILL process_id; : menghentikan query/process
+EXPLAIN query; : melihat execution plan query
+ANALYZE TABLE : analisa tabel
+OPTIMIZE TABLE : optimasi tabel
+CHECK TABLE : cek kerusakan tabel
+REPAIR TABLE : memperbaiki tabel
+
+========================
+BACKUP & RESTORE
+========================
+
+mysqldump : backup database
+mysql import : restore database
+SELECT INTO OUTFILE : export data ke file
+LOAD DATA INFILE : import file ke tabel
+
+========================
+ENGINE & SYSTEM
+========================
+
+SHOW ENGINES; : melihat storage engine
+SHOW VARIABLES; : melihat konfigurasi MySQL
+SHOW STATUS; : melihat status server
+SHOW GRANTS; : melihat privilege user
+SHOW USERS; : melihat user MySQL
