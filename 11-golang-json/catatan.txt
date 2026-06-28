@@ -28,5 +28,16 @@
     - Namun bagaimana jika kebalikannya?
     - Untuk melakukan konversi dari JSON ke tipe data di Go-Lang (Decode), kita bisa menggunakan function json.Unmarshal(byte[], interface{})
     - Dimana byte[] adalah data JSON nya, sedangkan interface{} adalah tempat menyimpan hasil konversi, biasa berupa pointer
+- JSON Array : https://docs.google.com/presentation/d/1mGVdO7Khmiw-9lDmkCWqd9l5_UqohKRkpHbjabRD--U/edit?slide=id.ge81f7990e5_0_340#slide=id.ge81f7990e5_0_340
+    JSON Array:
+    - Selain tipe dalam bentuk Object, biasanya dalam JSON, kita kadang menggunakan tipe data Array
+    - Array di JSON mirip dengan Array di JavaScript, dia bisa berisikan tipe data primitif, atau tipe data kompleks (Object atau Array)
+    - Di Go-Lang, JSON Array direpresentasikan dalam bentuk slice
+    - Konversi dari JSON atau ke JSON dilakukan secara otomatis oleh package json menggunakan tipe data slice
+
+    Decode JSON Array :
+    - Selain menggunakan Array pada attribute di Object
+    - Kita juga bisa melakukan encode atau decode langsung JSON Array nya
+    - Encode dan Decode JSON Array bisa menggunakan tipe data Slice
 
 
