@@ -26,7 +26,7 @@ import (
 )
 
 func setupTestDB() *sql.DB {
-	db, err := sql.Open("mysql", "root@tcp(localhost:3306)/belajar_golang_restful_api_test")
+	db, err := sql.Open("mysql", "root:password@tcp(localhost:3306)/belajar_golang_restful_api")
 	helper.PanicIfError(err)
 
 	db.SetMaxIdleConns(5)
