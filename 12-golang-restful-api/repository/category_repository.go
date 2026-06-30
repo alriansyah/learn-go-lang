@@ -13,4 +13,3 @@ type CategoryRepository interface {
 	FindById(ctx context.Context, tx *sql.Tx, categoryId int) (domain.Category, error)
 	FindAll(ctx context.Context, tx *sql.Tx) []domain.Category
 }
-	
