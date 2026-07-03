@@ -32,3 +32,7 @@
     - Program ini perlu kita install manual di komputer kita dengan perintah : go install github.com/google/wire/cmd/wire@latest
     - Secara otomatis akan ada file binary di $GOPATH/bin/wire
     - Agar aplikasi command line wire tersebut bisa diakses, jangan lupa masukkan ke $PATH sistem operasi kita, seperti yang pernah kita lakukan ketika belajar setting $PATH Go-Lang di kelas Go-Lang Dasar
+- Provider : 
+    Provider :
+    - Untuk melakukan Dependency Injection, kita perlu buat dalam bentuk function constructor
+    - Dalam Google Wire, function constructor tersebut kita sebut dengan Provider
