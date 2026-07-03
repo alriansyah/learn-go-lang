@@ -4,7 +4,7 @@ type SimpleRepository struct {
 }
 
 // Function Provider
-func NewSimpleRepository(isError bool) *SimpleRepository {
+func NewSimpleRepository() *SimpleRepository {
 	return &SimpleRepository{}
 }
 

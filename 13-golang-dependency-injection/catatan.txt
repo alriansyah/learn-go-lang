@@ -44,3 +44,8 @@
     - Khusus ketika membuat Injector, pada file nya kita perlu tambahkan komentar penanda : 
         //go:build wireinject
         // +build wireinject
+- Dependency Injection : https://docs.google.com/presentation/d/1B6CC23M-XFkGRZwdHLYmkOULM0l1cSCpx02yeXkPb4U/edit?slide=id.g101f95782f7_0_136#slide=id.g101f95782f7_0_136
+    Dependency Injection :
+    - Setelah kita membuat Injector dan Provider, selanjutnya yang perlu kita lakukan adalah menggunakan aplikasi command line Google Wire untuk melakukan auto generate kode Dependency Injection
+    - Kita bisa menggunakan perintah ini untuk melakukan auto generate kode dependency injection : wire gen namapackage, wire gen golang-dependency-injection/simple
+    - Secara otomatis aplikasi Google Wire akan mencari kode Injector di package tersebut, lalu membuat file wire_gen.go yang isinya adalah kode otomatis dependency injection
