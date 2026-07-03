@@ -1,12 +1,12 @@
 package main
 
 import (
-	"golang-restful-api/app"
-	"golang-restful-api/controller"
-	"golang-restful-api/helper"
-	"golang-restful-api/middleware"
-	"golang-restful-api/repository"
-	"golang-restful-api/service"
+	"golang-dependency-injection/app"
+	"golang-dependency-injection/controller"
+	"golang-dependency-injection/helper"
+	"golang-dependency-injection/middleware"
+	"golang-dependency-injection/repository"
+	"golang-dependency-injection/service"
 	"net/http"
 
 	"github.com/go-playground/validator/v10"

@@ -26,4 +26,9 @@
     - Salah satu kenapa Google Wire menjadi pilihan, karena saat ini Google Wire adalah library paling populer untuk melakukan Dependency Injection di Go-Lang
     - Selain itu, Google Wire merupakan library Dependency Injection yang berbasis compile, artinya kodenya akan di generate, bukan menggunakan reflection
     - Hal ini membuat Google Wire menjadi cepat, karena hasil kompilasi nya adalah kode yang sudah di generate melakukan Dependency Injection, tanpa perlu menggunakan reflection lagi
-
+- Menginstall Wire : https://docs.google.com/presentation/d/1B6CC23M-XFkGRZwdHLYmkOULM0l1cSCpx02yeXkPb4U/edit?slide=id.g101f95782f7_0_60#slide=id.g101f95782f7_0_60
+    Menginstall Wire :
+    - Google Wire membutuhkan aplikasi command line wire untuk melakukan auto generate kode Dependency injection ketika kita nanti membuat kode
+    - Program ini perlu kita install manual di komputer kita dengan perintah : go install github.com/google/wire/cmd/wire@latest
+    - Secara otomatis akan ada file binary di $GOPATH/bin/wire
+    - Agar aplikasi command line wire tersebut bisa diakses, jangan lupa masukkan ke $PATH sistem operasi kita, seperti yang pernah kita lakukan ketika belajar setting $PATH Go-Lang di kelas Go-Lang Dasar

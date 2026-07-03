@@ -1,8 +1,8 @@
 package app
 
 import (
-	"golang-restful-api/controller"
-	"golang-restful-api/exception"
+	"golang-dependency-injection/controller"
+	"golang-dependency-injection/exception"
 
 	"github.com/julienschmidt/httprouter"
 )
