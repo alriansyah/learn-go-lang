@@ -7,9 +7,9 @@ import (
 	"github.com/google/wire"
 )
 
-func InitializedService() *SimpleService {
+func InitializedService() (*SimpleService, error) {
 	wire.Build(
 		NewSimpleRepository, NewSimpleService, // memberi tahu ke dalam google wire, function mana saja yang digunakan sebagai provider
 	)
-	return nil
+	return nil, nil
 }
