@@ -6,8 +6,13 @@
 
 package simple
 
+import (
+	"github.com/google/wire"
+)
+
 // Injectors from injector.go:
 
+// Function Injector
 func InitializedService(isError bool) (*SimpleService, error) {
 	simpleRepository := NewSimpleRepository(isError)
 	simpleService, err := NewSimpleService(simpleRepository)
@@ -17,9 +22,26 @@ func InitializedService(isError bool) (*SimpleService, error) {
 	return simpleService, nil
 }
 
+// Function Injector
 func InitializedDatabaseRepository() *DatabaseRepository {
 	databasePostgreSQL := NewDatabasePostgreSQL()
 	databaseMongoDB := NewDatabaseMongoDB()
 	databaseRepository := NewDatabaseRepository(databasePostgreSQL, databaseMongoDB)
 	return databaseRepository
 }
+
+// Function Injector
+func InitializedFooBarService() *FooBarService {
+	fooRepository := NewFooRepository()
+	fooService := NewFooService(fooRepository)
+	barRepository := NewBarRepository()
+	barService := NewBarService(barRepository)
+	fooBarService := NewFooBarService(fooService, barService)
+	return fooBarService
+}
+
+// injector.go:
+
+var fooSet = wire.NewSet(NewFooRepository, NewFooService)
+
+var barSet = wire.NewSet(NewBarRepository, NewBarService)

@@ -64,3 +64,7 @@
     - Saat melakukan dependency injection, kadang ada kasus kita membuat beberapa Provider dengan tipe yang sama
     - Hal ini akan membuat error proses auto generate kode dependency injection, karena Google Wire tidak mendukung multiple binding dengan tipe yang sama
     - Pada kasus ini, kita bisa membuat tipe alias untuk multiple binding
+- Provider Set : https://docs.google.com/presentation/d/1B6CC23M-XFkGRZwdHLYmkOULM0l1cSCpx02yeXkPb4U/edit?slide=id.g101f95782f7_0_152#slide=id.g101f95782f7_0_152
+    Provider Set :
+    - Google Wire memiliki fitur yang bernama Provider Set, fitur ini digunakan untuk melakukan grouping Provider
+    - Provider Set sangat berguna ketika kode program kita sudah banyak, dan Providernya sudah banyak, sehingga akan lebih mudah untuk dibaca ketika kita grouping data Provider nya
