@@ -68,3 +68,8 @@
     Provider Set :
     - Google Wire memiliki fitur yang bernama Provider Set, fitur ini digunakan untuk melakukan grouping Provider
     - Provider Set sangat berguna ketika kode program kita sudah banyak, dan Providernya sudah banyak, sehingga akan lebih mudah untuk dibaca ketika kita grouping data Provider nya
+- Binding Interface : https://docs.google.com/presentation/d/1B6CC23M-XFkGRZwdHLYmkOULM0l1cSCpx02yeXkPb4U/edit?slide=id.g101f95782f7_0_262#slide=id.g101f95782f7_0_262
+    Binding Interface :
+    - Dalam pembuatan aplikasi, sering sekali kita biasanya menggunakan Interface sebagai kontrak struct
+    - Secara default, Google Wire akan menggunakan tipe data asli untuk melakukan dependency injection, jadi jika terdapat parameter berupa Interface, dan tidak ada Provider yang mengembalikan Interface tersebut, maka akan dianggap error
+    - Pada kasus ini, kita bisa memberi tahu ke Google Wire, jika kita ingin melakukan binding interface, yaitu memberi tahu untuk sebuah interface akan menggunakan provider dengan tipe apa
