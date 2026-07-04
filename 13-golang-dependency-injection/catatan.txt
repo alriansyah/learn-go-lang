@@ -91,3 +91,7 @@
     Struct Field Provider :
     - Google Wire juga mendukung pembuatan Provider dari Field sebuah Struct
     - Misal pada kondisi kita ingin menggunakan sebuah Field dari Struct untuk dijadikan dependency untuk Provider lain
+- Cleanup Function : https://docs.google.com/presentation/d/1B6CC23M-XFkGRZwdHLYmkOULM0l1cSCpx02yeXkPb4U/edit?slide=id.g101f95782f7_0_348#slide=id.g101f95782f7_0_348
+    Cleanup Function :
+    - Jika Provider membuat object yang membutuhkan proses cleanup (pembersihan) setelah object dibuat, maka pada provider kita bisa mengembalikan closure
+    - Closure secara otomatis akan dipanggil dalam proses cleanup oleh Google Wire
