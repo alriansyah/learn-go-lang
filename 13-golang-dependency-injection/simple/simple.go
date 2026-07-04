@@ -6,7 +6,7 @@ type SimpleRepository struct {
 	Error bool
 }
 
-// Function Provider
+// Function Provider / Constructor
 func NewSimpleRepository(isError bool) *SimpleRepository {
 	return &SimpleRepository{
 		Error: isError,
@@ -17,7 +17,7 @@ type SimpleService struct {
 	*SimpleRepository
 }
 
-// Function Provider
+// Function Provider / Constructor
 func NewSimpleService(repository *SimpleRepository) (*SimpleService, error) {
 	if repository.Error {
 		return nil, errors.New("failed create service")
