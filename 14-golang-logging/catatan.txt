@@ -5,3 +5,22 @@
     - Logging adalah aksi menambah informasi log ke log file
     - Logging sudah menjadi standar industri untuk menampilkan informasi yang terjadi di aplikasi yang kita buat
     - Logging bukan hanya untuk menampilkan informasi, kadang digunakan untuk proses debugging ketika terjadi masalah di aplikasi kita
+- Logging Library : https://docs.google.com/presentation/d/1edVvzU_sOExvlN4lzYWOxF38v5GAJHdbbYUqsderNO0/edit?slide=id.g10daea00445_0_282#slide=id.g10daea00445_0_282
+    Go-Lang Logging :
+    - Menggunakan Go-Lang sebenarnya kita bisa package log untuk melakukan logging
+    - Hanya saja karena fiturnya terbatas, oleh karena itu kebanyakan programmer tidak menggunakannya
+    - Pada kelas ini kita tidak akan menggunakan package log di Go-Lang untuk belajar Logging
+
+    Logging Library :
+    - Banyak sekali library yang bisa kita gunakan untuk logging di Go-Lang, seperti :
+        - Logrus : https://github.com/sirupsen/logrus 
+        - Zap : https://github.com/uber-go/zap 
+        - Zerolog : https://github.com/rs/zerolog 
+        - Dan masih banyak yang lainnya
+    
+    Logrus :
+    - Pada kelas ini kita akan menggunakan Logrus
+    - Logrus adalah library logging untuk Go-Lang yang saat ini paling populer
+    - https://github.com/sirupsen/logrus
+
+
