@@ -70,3 +70,10 @@
     - Atau, kita juga bisa langsung memasukkan beberapa Field dengan menggunakan Fields
     - Fields adalah alias untuk map[string]interface{}
     - Caranya kita bisa menggunakan function logger.WithFields()
+- Entry : https://docs.google.com/presentation/d/1edVvzU_sOExvlN4lzYWOxF38v5GAJHdbbYUqsderNO0/edit?slide=id.g10daea00445_0_458#slide=id.g10daea00445_0_458
+    Entry :
+    - Entry adalah sebuah Struct representasi dari log yang kita kirim menggunakan Logrus Logger
+    - Setiap log yang kita kirim, maka akan dibuatkan object Entry
+    - Contohnya ketika kita membuat Formatter sendiri, maka parameter yang kita dapat untuk melakukan formatting bukanlah string message, melainkan object Entry
+    - https://github.com/sirupsen/logrus/blob/master/entry.go 
+    - Untuk membuat entry, kita bisa menggunakan function logrus.NewEntry()
