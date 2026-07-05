@@ -33,3 +33,17 @@
     - Logger adalah struct utama pada Logrus untuk melakukan logging
     - Untuk membuat Logger, kita bisa menggunakan function New() pada package logrus
     - Dan hasil dari function New() adalah sebuah pointer Logger
+- Level : https://docs.google.com/presentation/d/1edVvzU_sOExvlN4lzYWOxF38v5GAJHdbbYUqsderNO0/edit?slide=id.g10daea00445_0_412#slide=id.g10daea00445_0_412
+    Level :
+    - Dalam Logging, hal yang paling penting adalah Level
+    - Level adah penentuan prioritas atau jenis dari sebuah kejadian
+    - Level itu dimulai dari level terendah sampai level tertinggi
+    - Logrus mendukung banyak sekali level
+
+    Level dan keterangan : https://docs.google.com/presentation/d/1edVvzU_sOExvlN4lzYWOxF38v5GAJHdbbYUqsderNO0/edit?slide=id.g10daea00445_0_447#slide=id.g10daea00445_0_447
+
+    Logging Level :
+    - Kenapa Trace dan Debug tidak keluar di console?
+    - Karena secara default, Logging Level yang digunakan adalah Info, artinya hanya prioritas Info keatas yang di log
+    - Untuk mengubah Logging Level, kita bisa gunakan logger.SetLevel()
+
