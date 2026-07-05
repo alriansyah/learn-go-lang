@@ -28,4 +28,8 @@
 
     Menambah Dependency :
     - go get github.com/sirupsen/logrus
-
+- Logger : https://docs.google.com/presentation/d/1edVvzU_sOExvlN4lzYWOxF38v5GAJHdbbYUqsderNO0/edit?slide=id.g10daea00445_0_397#slide=id.g10daea00445_0_397
+    Logger :
+    - Logger adalah struct utama pada Logrus untuk melakukan logging
+    - Untuk membuat Logger, kita bisa menggunakan function New() pada package logrus
+    - Dan hasil dari function New() adalah sebuah pointer Logger
