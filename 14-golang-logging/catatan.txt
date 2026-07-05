@@ -77,3 +77,9 @@
     - Contohnya ketika kita membuat Formatter sendiri, maka parameter yang kita dapat untuk melakukan formatting bukanlah string message, melainkan object Entry
     - https://github.com/sirupsen/logrus/blob/master/entry.go 
     - Untuk membuat entry, kita bisa menggunakan function logrus.NewEntry()
+- Hook : https://docs.google.com/presentation/d/1edVvzU_sOExvlN4lzYWOxF38v5GAJHdbbYUqsderNO0/edit?slide=id.g10daea00445_0_528#slide=id.g10daea00445_0_528
+    Hook : (nmirip dengan callback di javascript)
+    - Hook adalah sebuah Struct yang bisa kita tambahkan ke Logger sebagai callback yang akan dieksekusi ketika terdapat kejadian log untuk level tertentu
+    - Contohnya misal, ketika ada log error, kita ingin mengirim notifikasi via chat ke programmer, dan lain-lain
+    - Kita bisa menambah Hook ke Logger dengan menggunakan function logger.AddHook()
+    - Dan kita juga bisa menambahkan lebih dari satu Hook ke Logger
