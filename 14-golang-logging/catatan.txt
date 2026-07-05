@@ -83,3 +83,9 @@
     - Contohnya misal, ketika ada log error, kita ingin mengirim notifikasi via chat ke programmer, dan lain-lain
     - Kita bisa menambah Hook ke Logger dengan menggunakan function logger.AddHook()
     - Dan kita juga bisa menambahkan lebih dari satu Hook ke Logger
+- Singleton : https://docs.google.com/presentation/d/1edVvzU_sOExvlN4lzYWOxF38v5GAJHdbbYUqsderNO0/edit?slide=id.g10daea00445_0_432#slide=id.g10daea00445_0_432
+    Singleton : (tidak disarankan)
+    - Logrus sendiri memiliki singleton object untuk Logger, sehingga kita tidak perlu membuat object Logger sendiri sebenarnya
+    - Namun artinya, jika kita ubah data Logger singleton tersebut, maka secara otomatis yang menggunakan Logger tersebut akan berubah
+    - Secara default, Logger singleton yang ada di logrus menggunakan TextFormatter dan Info Level
+    - Cara menggunakan Logger singleton ini, kita bisa langsung menggunakan package logrus nya saja
