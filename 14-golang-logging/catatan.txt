@@ -46,4 +46,9 @@
     - Kenapa Trace dan Debug tidak keluar di console?
     - Karena secara default, Logging Level yang digunakan adalah Info, artinya hanya prioritas Info keatas yang di log
     - Untuk mengubah Logging Level, kita bisa gunakan logger.SetLevel()
+- Output : https://docs.google.com/presentation/d/1edVvzU_sOExvlN4lzYWOxF38v5GAJHdbbYUqsderNO0/edit?slide=id.g10daea00445_0_416#slide=id.g10daea00445_0_416
+    Output :
+    - Secara default, output tujuan log yang kita kirim via Logrus adalah ke Console
+    - Kadang kita butuh mengubah output tujuan log, misal ke File atau Database
+    - Output Logger adalah io.Writer, jadi kita bisa menggunakan io.Writer dari Go-Lang atau bisa membuat sendiri mengikuti kontrak io.Writer
 
