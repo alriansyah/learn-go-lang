@@ -22,5 +22,10 @@
     - Pada kelas ini kita akan menggunakan Logrus
     - Logrus adalah library logging untuk Go-Lang yang saat ini paling populer
     - https://github.com/sirupsen/logrus
+- Membuat Project : https://docs.google.com/presentation/d/1edVvzU_sOExvlN4lzYWOxF38v5GAJHdbbYUqsderNO0/edit?slide=id.g10daea00445_0_301#slide=id.g10daea00445_0_301
+    Membuat Project :
+    - go mod init belajar-golang-logging
 
+    Menambah Dependency :
+    - go get github.com/sirupsen/logrus
 
