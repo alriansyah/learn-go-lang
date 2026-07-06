@@ -8,4 +8,8 @@
     - Pengecekan ketika proses kompilasi
     - Tidak perlu manual menggunakan pengecekan tipe data dan konversi tipe data
     - Memudahkan programmer membuat kode program yang generic sehingga bisa digunakan oleh berbagai tipe data
+- Membuat Project : https://docs.google.com/presentation/d/1SrZVMmxeMPf3wjR0UKl5p_92tTeqdfePWPuJ0QZy-lA/edit?slide=id.g1229c0b82cc_0_478#slide=id.g1229c0b82cc_0_478
+    Membuat Project :
+    - go mod init ProgrammerZamanNow/belajar-golang-generics
+    - go get github.com/stretchr/testify
 
