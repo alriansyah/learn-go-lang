@@ -84,3 +84,7 @@
     - Namun, generic di method merupakan generic yang terdapat di struct nya. 
     - Kita wajib menyebutkan semua type parameter yang terdapat di struct, walaupun tidak kita gunakan misalnya, atau jika tidak ingin kita gunakan, kita bisa gunakan _ (garis bawah) sebagai pengganti type parameter nya
     - Method tidak bisa memiliki type parameter yang mirip dengan di function
+- Generic Interface : https://docs.google.com/presentation/d/1SrZVMmxeMPf3wjR0UKl5p_92tTeqdfePWPuJ0QZy-lA/edit?slide=id.g1229c0b82cc_0_387#slide=id.g1229c0b82cc_0_387
+    Generic Interface :
+    - Generic juga bisa kita gunakan di Interface
+    - Secara otomatis, semua struct yang ingin mengikuti kontrak interface tersebut harus menggunakan generic juga
