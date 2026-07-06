@@ -99,8 +99,8 @@
     - Kita juga bisa menggunakan in line type constraint agar lebih mudah, dengan cara menambahkan type parameter selanjutnya, misal
     - [S interface{[]E}, E interface{}], artinya S harus slice element E, dimana E boleh tipe apapun
     - [S []E, E any], artinya S harus slice element E, dimana E boleh tipe apapun
-- Generic di Type Parameter : 
-    Generic di Type Parameter : 
+- Experimental Package : https://docs.google.com/presentation/d/1SrZVMmxeMPf3wjR0UKl5p_92tTeqdfePWPuJ0QZy-lA/edit?slide=id.g1229c0b82cc_0_673#slide=id.g1229c0b82cc_0_673
+    Experimental Package :
     - Saat versi Go-Lang 1.18, terdapat experimental package yang banyak menggunakan fitur Generic, namun belum resmi masuk ke Go-Lang Standard Library
     - Kedepannya, karena ini masih experimental (percobaan), bisa jadi package ini akan berubah atau bahkan mungkin akan dihapus
     - https://pkg.go.dev/golang.org/x/exp 
@@ -109,9 +109,11 @@
 
     Constraints Package :
     - Constraints Package berisi type declaration yang bisa kita gunakan untuk tipe data bawaan Go-Lang, misal Number, Complex, Ordered, dan lain-lain
-    - https://pkg.go.dev/golang.org/x/exp/constraints
+    - https://pkg.go.dev/golang.org/x/exp/constraints 
 
     Maps & Slices Packages :
     - Terdapat juga package maps dan slices, yang berisi function untuk mengelola data Map dan Slice, namun sudah menggunakan fitur Generic
     - https://pkg.go.dev/golang.org/x/exp/maps 
-    - https://pkg.go.dev/golang.org/x/exp/slices 
+    - https://pkg.go.dev/golang.org/x/exp/slices
+
+
