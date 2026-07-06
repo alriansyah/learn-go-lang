@@ -28,6 +28,7 @@ func TestMin(t *testing.T) {
 	assert.Equal(t, Age(100), Min(Age(100), Age(200)))
 }
 
+// Type Inference
 func TestMinTypeInference(t *testing.T) {
 	assert.Equal(t, 100, Min(100, 200))
 	assert.Equal(t, int64(100), Min(int64(100), int64(200)))

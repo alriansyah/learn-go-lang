@@ -65,3 +65,8 @@
     Type Approximation :
     - Untungnya, Go-Lang memiliki feature bernama Type Approximation, dimana kita bisa menyebutkan bahwa semua constraint dengan tipe tersebut dan juga yang memiliki tipe dasarnya adalah tipe tersebut, maka bisa digunakan
     - Untuk menggunakan Type Approximation, kita bisa gunakan tanda ~ (tilde)
+- Type Inference : https://docs.google.com/presentation/d/1SrZVMmxeMPf3wjR0UKl5p_92tTeqdfePWPuJ0QZy-lA/edit?slide=id.g1229c0b82cc_0_562#slide=id.g1229c0b82cc_0_562
+    Type Inference :
+    - Type Inference merupakan fitur dimana kita tidak perlu menyebutkan Type Parameter ketika memanggil kode generic
+    - Tipe data Type Parameter bisa dibaca secara otomatis misal dari parameter yang kita kirim
+    - Namun perlu diingat, pada beberapa kasus, jika terjadi error karena Type Inference, kita bisa dengan mudah memperbaikinya dengan cara menyebutkan Type Parameter nya saja
