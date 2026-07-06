@@ -44,3 +44,16 @@
     - Type Parameter juga mendukung hal serupa, kita bisa gunakan constraint dengan menggunakan interface, maka secara otomatis semua interface yang compatible dengan type constraint tersebut bisa kita gunakan
 
     Diagram : Type Interface : https://docs.google.com/presentation/d/1SrZVMmxeMPf3wjR0UKl5p_92tTeqdfePWPuJ0QZy-lA/edit?slide=id.g1229c0b82cc_0_499#slide=id.g1229c0b82cc_0_499
+- Type Sets : https://docs.google.com/presentation/d/1SrZVMmxeMPf3wjR0UKl5p_92tTeqdfePWPuJ0QZy-lA/edit?slide=id.g1229c0b82cc_0_391#slide=id.g1229c0b82cc_0_391
+    Type Sets :
+    - Salah satu fitur yang menarik di Go-Lang Generic adalah Type Sets
+    - Dengan fitur ini, kita bisa menentukan lebih dari satu tipe constraint yang diperbolehkan pada type parameter
+
+    Membuat Type Set :
+    - Type Set adalah sebuah interface
+    - Cara membuat Type Set :
+        type NamaTypeSet interface {
+            P|Q|R
+        }
+    - TypeSet hanya bisa digunakan pada type parameter, tidak bisa digunakan sebagai tipe data field atau variable
+    - Jika operator bisa digunakan di semua tipe data di dalam type set, maka operator tersebut bisa digunakan dalam kode generic
