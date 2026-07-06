@@ -57,3 +57,11 @@
         }
     - TypeSet hanya bisa digunakan pada type parameter, tidak bisa digunakan sebagai tipe data field atau variable
     - Jika operator bisa digunakan di semua tipe data di dalam type set, maka operator tersebut bisa digunakan dalam kode generic
+- Type Approximation: https://docs.google.com/presentation/d/1SrZVMmxeMPf3wjR0UKl5p_92tTeqdfePWPuJ0QZy-lA/edit?slide=id.g1229c0b82cc_0_395#slide=id.g1229c0b82cc_0_395
+    Type Declaration :
+    - Kadang, kita sering membuat Type Declaration di Golang untuk tipe data lain, misal kita membuat tipe data Age untuk tipe data int
+    - Secara default, jika kita gunakan Age sebagai type declaration untuk int, lalu kita membuat Type Set yang berisi constraint int, maka tipe data Age dianggap tidak compatible dengan Type Set yang kita buat
+
+    Type Approximation :
+    - Untungnya, Go-Lang memiliki feature bernama Type Approximation, dimana kita bisa menyebutkan bahwa semua constraint dengan tipe tersebut dan juga yang memiliki tipe dasarnya adalah tipe tersebut, maka bisa digunakan
+    - Untuk menggunakan Type Approximation, kita bisa gunakan tanda ~ (tilde)
