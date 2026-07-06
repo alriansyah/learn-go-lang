@@ -13,7 +13,7 @@ type Number interface {
 		float32 | float64
 }
 
-func Min[T Number](first T, second T) T {
+func Min[T Number](first, second T) T {
 	if first < second {
 		return first
 	} else {

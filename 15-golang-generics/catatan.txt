@@ -70,3 +70,7 @@
     - Type Inference merupakan fitur dimana kita tidak perlu menyebutkan Type Parameter ketika memanggil kode generic
     - Tipe data Type Parameter bisa dibaca secara otomatis misal dari parameter yang kita kirim
     - Namun perlu diingat, pada beberapa kasus, jika terjadi error karena Type Inference, kita bisa dengan mudah memperbaikinya dengan cara menyebutkan Type Parameter nya saja
+- Generic Type : https://docs.google.com/presentation/d/1SrZVMmxeMPf3wjR0UKl5p_92tTeqdfePWPuJ0QZy-lA/edit?slide=id.g1229c0b82cc_0_383#slide=id.g1229c0b82cc_0_383
+    Generic Type :
+    - Sebelumnya kita sudah bahas tentang generic di function
+    - Generic juga bisa digunakan ketika membuat type
