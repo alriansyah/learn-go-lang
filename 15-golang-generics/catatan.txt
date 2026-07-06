@@ -30,4 +30,8 @@
     - Misal nya digunakan untuk return type atau function parameter
     - Kita cukup gunakan nama Type Parameter nya saja
     - Type Parameter hanya bisa digunakan di functionnya saja, tidak bisa digunakan di luar function
+- Multiple Type Parameter : https://docs.google.com/presentation/d/1SrZVMmxeMPf3wjR0UKl5p_92tTeqdfePWPuJ0QZy-lA/edit?slide=id.g1229c0b82cc_0_375#slide=id.g1229c0b82cc_0_375
+    Multiple Type Parameter :
+    - Penggunakan Type Parameter bisa lebih dari satu, jika kita ingin menambahkan multiple Type Parameter, kita cukup gunakan tanda , (koma) sebagai pemisah antar Type Parameter
+    - Nama Type Parameter harus berbeda, tidak boleh sama jika kita menambah Type Parameter lebih dari satu
 
