@@ -13,4 +13,10 @@
     - Mirip seperti Git, dimana melakukan tracking semua perubahan kode program
     - Dengan menggunakan Database Migration, semua tim member bisa melihat perubahan struktur database, dan bisa dengan mudah menjalankan perubahan tersebut di tiap komputer masing-masing
     - Selain itu, dengan adanya Database Migration, kita bisa melakukan review terlebih dahulu, sebelum menjalankan perubahan di database, jaga-jaga ada perubahan yang salah, yang bisa berdampak berbahaya ke database
+- Pengenalan Golang Migrate : https://docs.google.com/presentation/d/1GDOmXHIoxKfm2k2ku9gD1u-VpsEri6G-MJEMMTufDug/edit?slide=id.g15aeebdcd6e_0_267#slide=id.g15aeebdcd6e_0_267
+    Pengenalan Golang Migrate
+    - Golang Migrate adalah salah satu tool untuk Database Migration yang populer digunakan oleh programmer Golang
+    - Golang Migrate bisa diintegrasikan dengan aplikasi, atau dijalankan sebagai aplikasi standalone
+    - Golang Migrate mendukung banyak sekali database, seperti MySQL, PostgreSQL, Sqlite, MongoDB, Cassandra, dan lain-lain
+    - https://github.com/golang-migrate/migrate
 
