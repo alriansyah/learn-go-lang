@@ -114,6 +114,12 @@ Ada materi catatan di : database.go
     Selanjutnya :
     - Selanjutnya kita bisa perbaiki file database migration nya
     - Lalu ulangi jalankan file migration nya
+- Mencoba Aplikasi : https://docs.google.com/presentation/d/1GDOmXHIoxKfm2k2ku9gD1u-VpsEri6G-MJEMMTufDug/edit?slide=id.g1576d4f3750_0_79#slide=id.g1576d4f3750_0_79
+    Mencoba Aplikasi :
+    - Sekarang sebelum kita menjalankan aplikasi, selalu jalankan database migration terlebih dahulu
+    - Dan selanjutnya kita bisa mencoba menjalankan aplikasinya
+    - go run main.go
+
 
 Ada materi catatan di : database.go
 
