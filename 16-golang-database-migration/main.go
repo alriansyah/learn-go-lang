@@ -1,12 +1,12 @@
 package main
 
 import (
-	"golang-restful-api/app"
-	"golang-restful-api/controller"
-	"golang-restful-api/helper"
-	"golang-restful-api/middleware"
-	"golang-restful-api/repository"
-	"golang-restful-api/service"
+	"golang-database-migration/app"
+	"golang-database-migration/controller"
+	"golang-database-migration/helper"
+	"golang-database-migration/middleware"
+	"golang-database-migration/repository"
+	"golang-database-migration/service"
 	"net/http"
 
 	"github.com/go-playground/validator/v10"

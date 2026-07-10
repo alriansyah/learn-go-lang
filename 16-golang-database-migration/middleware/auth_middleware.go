@@ -1,8 +1,8 @@
 package middleware
 
 import (
-	"golang-restful-api/helper"
-	"golang-restful-api/model/web"
+	"golang-database-migration/helper"
+	"golang-database-migration/model/web"
 	"net/http"
 )
 

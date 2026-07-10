@@ -1,8 +1,8 @@
 package helper
 
 import (
-	"golang-restful-api/model/domain"
-	"golang-restful-api/model/web"
+	"golang-database-migration/model/domain"
+	"golang-database-migration/model/web"
 )
 
 func ToCategoryResponse(category domain.Category) web.CategoryResponse {

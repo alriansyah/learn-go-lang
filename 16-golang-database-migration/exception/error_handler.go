@@ -1,8 +1,8 @@
 package exception
 
 import (
-	"golang-restful-api/helper"
-	"golang-restful-api/model/web"
+	"golang-database-migration/helper"
+	"golang-database-migration/model/web"
 	"net/http"
 
 	"github.com/go-playground/validator/v10"

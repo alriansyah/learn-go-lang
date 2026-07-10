@@ -1,9 +1,9 @@
 package controller
 
 import (
-	"golang-restful-api/helper"
-	"golang-restful-api/model/web"
-	"golang-restful-api/service"
+	"golang-database-migration/helper"
+	"golang-database-migration/model/web"
+	"golang-database-migration/service"
 	"net/http"
 	"strconv"
 

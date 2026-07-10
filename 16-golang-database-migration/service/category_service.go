@@ -2,7 +2,7 @@ package service
 
 import (
 	"context"
-	"golang-restful-api/model/web"
+	"golang-database-migration/model/web"
 )
 
 type CategoryService interface {

@@ -1,8 +1,8 @@
 package app
 
 import (
-	"golang-restful-api/controller"
-	"golang-restful-api/exception"
+	"golang-database-migration/controller"
+	"golang-database-migration/exception"
 
 	"github.com/julienschmidt/httprouter"
 )

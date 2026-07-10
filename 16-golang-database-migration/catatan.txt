@@ -31,5 +31,5 @@
 - Membuat Project : https://docs.google.com/presentation/d/1GDOmXHIoxKfm2k2ku9gD1u-VpsEri6G-MJEMMTufDug/edit?slide=id.g1576d4f3750_0_24#slide=id.g1576d4f3750_0_24
     Membuat Project :
     - Sebagai contoh, kita akan menggunakan project Golang RESTful API yang pernah kita buat, lalu kita akan tambahkan Database Migration ke project tersebut
-    - https://github.com/ProgrammerZamanNow/belajar-golang-restful-api 
+    - https://github.com/ProgrammerZamanNow/belajar-golang-database-migration 
 

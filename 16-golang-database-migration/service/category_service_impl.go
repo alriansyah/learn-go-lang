@@ -3,11 +3,11 @@ package service
 import (
 	"context"
 	"database/sql"
-	"golang-restful-api/exception"
-	"golang-restful-api/helper"
-	"golang-restful-api/model/domain"
-	"golang-restful-api/model/web"
-	"golang-restful-api/repository"
+	"golang-database-migration/exception"
+	"golang-database-migration/helper"
+	"golang-database-migration/model/domain"
+	"golang-database-migration/model/web"
+	"golang-database-migration/repository"
 
 	"github.com/go-playground/validator/v10"
 )
