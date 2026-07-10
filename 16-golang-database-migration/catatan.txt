@@ -47,5 +47,11 @@
     Migration Up :
     - Saat kita membuat file database migration, file dengan akhiran up adalah file yang harus kita isi dengan perubahan yang ingin kita tambahkan
     - Misal, sekarang kita akan tambahkan table category, sesuai dengan aplikasi RESTful API yang sudah kita buat
+- Migration Down : https://docs.google.com/presentation/d/1GDOmXHIoxKfm2k2ku9gD1u-VpsEri6G-MJEMMTufDug/edit?slide=id.g1576d4f3750_0_83#slide=id.g1576d4f3750_0_83
+    Migration Down :
+    - Setiap file migration, selain file up, terdapat juga file down
+    - File down ini adalah file yang berisikan kode untuk mengembalikan perubahan yang kita lakukan di file up
+    - Kenapa ini diperlukan? Karena misal terjadi masalah di aplikasi, namun database migration terlanjur dijalankan, kita bisa melakukan rollback dengan cara menjalankan file down, karena berisikan kode untuk mengembalikan perubahan di file up
+    - Pada kasus ini, misal kita akan menghapus lagi table category
 
 
