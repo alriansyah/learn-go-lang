@@ -53,10 +53,17 @@
     - File down ini adalah file yang berisikan kode untuk mengembalikan perubahan yang kita lakukan di file up
     - Kenapa ini diperlukan? Karena misal terjadi masalah di aplikasi, namun database migration terlanjur dijalankan, kita bisa melakukan rollback dengan cara menjalankan file down, karena berisikan kode untuk mengembalikan perubahan di file up
     - Pada kasus ini, misal kita akan menghapus lagi table category
-- Membuat Database : 
+- Membuat Database : https://docs.google.com/presentation/d/1GDOmXHIoxKfm2k2ku9gD1u-VpsEri6G-MJEMMTufDug/edit?slide=id.g1576d4f3750_0_114#slide=id.g1576d4f3750_0_114
     Membuat Database :
     - Sebelum menjalankan Database Migration, sekarang kita perlu membuat dulu database nya
     - Hal ini karena pembuatan database tidak dilakukan di database migration, biasanya dilakukan manual diawal
     - Pada kasus ini, kita menggunakan database mysql, dan kita perlu ubah juga kode koneksi database di aplikasi agar terhubung dengan database baru
+- Menjalankan Migration : https://docs.google.com/presentation/d/1GDOmXHIoxKfm2k2ku9gD1u-VpsEri6G-MJEMMTufDug/edit?slide=id.g1576d4f3750_0_123#slide=id.g1576d4f3750_0_123
+    Menjalankan Migration :
+    - Selanjutnya, setelah selesai, kita bisa menjalan database migration menggunakan perintah : migrate -database "koneksidatabase" -path folder up
+    - -database harus berisikan koneksi database, misal untuk mysql, bisa menggunakan : mysql://user:password@tcp(host:port)/nama_database
+    - Untuk database lainnya, bisa lihat di halaman dokumentasinya : https://github.com/golang-migrate/migrate#databases 
+    - -path adalah lokasi folder file database migration
+    - up adalah perintah untuk menjalankan database migration dengan mode up
 
 
