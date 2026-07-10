@@ -65,5 +65,11 @@
     - Untuk database lainnya, bisa lihat di halaman dokumentasinya : https://github.com/golang-migrate/migrate#databases 
     - -path adalah lokasi folder file database migration
     - up adalah perintah untuk menjalankan database migration dengan mode up
+- Migration State : https://docs.google.com/presentation/d/1GDOmXHIoxKfm2k2ku9gD1u-VpsEri6G-MJEMMTufDug/edit?slide=id.g1576d4f3750_0_153#slide=id.g1576d4f3750_0_153
+    Migration State :
+    - Saat kita sudah melakukan migration, lalu kita menambah file migration baru, apa yang terjadi jika kita menjalankan migration lagi?
+    - Golang Migrate akan menyimpan state terakhir kita menjalankan database migration, artinya tidak akan dijalankan dari awal lagi, melainkan dari file terakhir yang sukses di migrasi
+    - Jadi kita tidak perlu takut file akan dijalankan lagi, jadi tidak perlu dihapus file migration lama-nya
+    - Semua informasi state tersebut disimpan dalam table schema_migration
 
 
