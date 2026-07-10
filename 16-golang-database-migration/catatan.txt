@@ -1,3 +1,5 @@
+Ada materi catatan di : database.go
+
 - Pengenalan Database Migration : https://docs.google.com/presentation/d/1GDOmXHIoxKfm2k2ku9gD1u-VpsEri6G-MJEMMTufDug/edit?slide=id.g15aeebdcd6e_0_263#slide=id.g15aeebdcd6e_0_263
     Pengenalan Database Migration :
     - Saat ini, kebanyakan aplikasi yang dibuat akan membutuhkan database
@@ -90,5 +92,30 @@
     - Lakukan down
     - Lakukan up beberapa versi
     - Lakukan down beberapa versi
+- Dirty State : https://docs.google.com/presentation/d/1GDOmXHIoxKfm2k2ku9gD1u-VpsEri6G-MJEMMTufDug/edit?slide=id.g1576d4f3750_0_216#slide=id.g1576d4f3750_0_216
+    Dirty State :
+    - Saat kita membuat database migration, kadang kesalahan sering terjadi
+    - Misal saja, kita melakukan typo sehingga membuat perintah SQL nya salah
+    - Jika kita terlanjur menjalankan database migration, maka state akan berubah menjadi Dirty State
+    - State gimana kita tidak bisa melakukan up atau down lagi
+    - Pada kasus ini, kita harus perbaiki manual, kenapa harus manual? Karena tidak ada cara otomatis memperbaikinya
+
+    Permasalahan :
+    - Permasalahan migration ini adalah, kita membuat dua table di file migration, pada pembuatan table pertama sukses, namun pada table kedua gagal
+    - Artinya file migration tidak sempurna, dan kita juga tidak bisa melakukan rollback, karena table kedua belum sukses dibuat
+    - Pada kondisi ini, terjadi yang namanya Dirty State, dimana kita tidak bisa melakukan up atau down, yang perlu kita lakukan adalah memperbaiki secara manual
+    
+    Mengubah Versi :
+    - Setelah kita memperbaiki secara manual, selanjutnya kita perlu mengubah versi migration di table schema_migrations
+    - Kita bisa lakukan manual, atau bisa otomatis menggunakan perintah : migrate -database "koneksi_database" -path folder force versi
+    - Dimana versi adalah versi dari file database migration
+    - Pada kasus ini, kita akan gunakan satu versi sebelum migration yang gagal
+
+    Selanjutnya :
+    - Selanjutnya kita bisa perbaiki file database migration nya
+    - Lalu ulangi jalankan file migration nya
+
+Ada materi catatan di : database.go
+
 
 
