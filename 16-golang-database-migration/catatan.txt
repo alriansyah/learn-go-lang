@@ -32,4 +32,16 @@
     Membuat Project :
     - Sebagai contoh, kita akan menggunakan project Golang RESTful API yang pernah kita buat, lalu kita akan tambahkan Database Migration ke project tersebut
     - https://github.com/ProgrammerZamanNow/belajar-golang-database-migration 
+- Membuat Database Migration : https://docs.google.com/presentation/d/1GDOmXHIoxKfm2k2ku9gD1u-VpsEri6G-MJEMMTufDug/edit?slide=id.g1576d4f3750_0_57#slide=id.g1576d4f3750_0_57
+    Membuat Database Migration :
+    - Untuk membuat database migration, kita bisa gunakan perintah : migrate create -ext sql -dir db/migrations nama_file_migration
+    - -ext adalah file extension, artinya kita membuat file .sql
+    - -dir adalah folder tempat disimpan
+    - Usahakan tidak menggunakan spasi pada nama file migration
+
+    File Migration :
+    - File migration akan diawali dengan waktu ketika kita membuat file migration, lalu diikuti dengan nama migration, dan diakhiri dengan tipe migration
+    - misal 20220921103313_create_table_category.up.sql
+    - Kenapa diawali dengan waktu? Agar file migration selalu berurut sesuai waktu kita membuat file migration tersebut
+
 
