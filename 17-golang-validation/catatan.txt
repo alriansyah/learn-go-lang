@@ -92,6 +92,12 @@
     - Kita bisa melakukan konversi ke ValidationErrors ketika terjadi validation error
     - Terdapat banyak sekali informasi yang bisa kita ambil dari ValidationErrors
     - ValidationErrors sendiri sebenarnya adalah alias untuk []FieldError
+- Validasi Cross Field : 
+    Validasi Cross Field :
+    - Sebelumnya kita sudah tahu Validator Package memiliki validation khusus untuk validasi dua variable
+    - Validation tersebut juga bisa digunakan untuk validasi cross Field jika di dalam Struct
+    - Caranya kita bisa menggunakan validation tag yang sama, namun perlu sebutkan field kedua-nya
+    - Misal pada Field Password, kita bisa tambahkan validate:eqfield=ConfirmPassword
 
 
 
