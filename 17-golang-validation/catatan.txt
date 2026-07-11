@@ -141,6 +141,13 @@
     - Di Baked-in Validation, beberapa validation memiliki parameter, misal min=10
     - Kita juga mengambil informasi nilai parameter nya di FieldLevel.Param()
     - Ini sangat cocok ketika kita membuat Validation yang memang membutuhkan parameter tambahan
+- Or Rule : https://docs.google.com/presentation/d/1RRKr7N1vf2ycFm6ZnWB0UCx9p-V9XOHJh2oaleO3lbQ/edit?slide=id.g162cb711b2a_0_610#slide=id.g162cb711b2a_0_610
+    Or Rule :
+    - Pada beberapa kasus, kadang kita ingin membuat kondisi OR pada validation
+    - Misal sebuah Field boleh email atau nomor telepon misalnya, artinya validasinya tidak bisa email,numeric
+    - Karena jika seperti itu, artinya Field wajib Email dan Numeric, sedangkan dua hal itu pasti berbeda
+    - Pada kasus ini, kita bisa gunakan | (pipe) sebagai pemisah untuk menandakan bahwa itu adalah OR
+    - Secara default, ketika menggunakan , (koma) artinya adalah AND
 
 
 
