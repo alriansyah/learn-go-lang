@@ -116,6 +116,12 @@
     - Selain Collection Array/Slice, kita juga bisa melakukan validasi terhadap Field Map
     - Karena dalam Map terdapat Key dan Value, kita bisa menggunakan dive untuk key dan dive untuk value
     - Namun khusus untuk key, kita harus tandai dengan tag keys dan diakhiri dengan endkeys
+- Validasi Basic Map : https://docs.google.com/presentation/d/1RRKr7N1vf2ycFm6ZnWB0UCx9p-V9XOHJh2oaleO3lbQ/edit?slide=id.g162cb711b2a_0_622#slide=id.g162cb711b2a_0_622
+    Basic Map :
+    - Kadang, kita juga sering membuat tipe data Map dengan key dan value berupa tipe data bukan Struct
+    - Pada kasus ini, jika kita ingin menambah validasi, caranya sama seperti pada Basic Collection, namun khusus untuk key, perlu ditambahkan keys dan endkeys
+    - Field Wallet map[string]int dengan tag dive,keys,required,endkeys,required,gt=0, artinya key string required, dan value required dan gt=0
+    - Karena value bukanlah Struct, jadi kita tidak perlu menambahkan dive lagi pada value
 
 
 
