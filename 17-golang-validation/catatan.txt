@@ -136,6 +136,11 @@
     FieldLevel :
     - FieldLevel merupakan parameter dari Validation Function yang kita buat
     - FieldLevel berisikan informasi Reflection seperti Field Value, Name dan lain-lain
+- Custom Validation Parameter : https://docs.google.com/presentation/d/1RRKr7N1vf2ycFm6ZnWB0UCx9p-V9XOHJh2oaleO3lbQ/edit?slide=id.g162cb711b2a_0_640#slide=id.g162cb711b2a_0_640
+    Custom Validation Parameter :
+    - Di Baked-in Validation, beberapa validation memiliki parameter, misal min=10
+    - Kita juga mengambil informasi nilai parameter nya di FieldLevel.Param()
+    - Ini sangat cocok ketika kita membuat Validation yang memang membutuhkan parameter tambahan
 
 
 
