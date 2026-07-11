@@ -67,7 +67,9 @@
     - Validator Package sudah menyediakan banyak sekali validation yang biasanya kita butuhkan, dari yang sederhana seperti required (string tidak boleh kosong), email (format data harus email), dan lain-lain
     - Ada banyak sekali Baked-in Validation yang sudah tersedia, dan kita hanya perlu menggunakan nama tag nya saja
     - https://pkg.go.dev/github.com/go-playground/validator/v10#readme-baked-in-validations 
-
+- Multiple Tag Validation : 
+    Multiple Tag Validation :
+    - Tag pada validation bisa lebih dari satu, kita bisa tambahkan , (koma) dan diikuti dengan tag selanjutnya
 
 
 
