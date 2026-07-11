@@ -55,6 +55,14 @@
     - Validator Package menggunakan konsep Tag untuk menyebutkan validation yang ingin digunakan
     - Setiap jenis validation, memiliki nama tag masing-masing, kita akan bahas di materi khusus untuk ini
     - Contoh validasi bahwa sebuah value harus ada isinya, bukan default value, misal kita bisa gunakan tag “required”, jika number pastikan bukan default number 0, dan jika string bukan default string “”, dan jika array/slice, bukan default array/slice kosong
+- Validasi Dua Variable : https://docs.google.com/presentation/d/1RRKr7N1vf2ycFm6ZnWB0UCx9p-V9XOHJh2oaleO3lbQ/edit?slide=id.g162cb711b2a_0_502#slide=id.g162cb711b2a_0_502
+    Validasi Dua Variable :
+    - Kadang, ada kasus dimana kita ingin melakukan validasi untuk membandingkan dua buah variable
+    - Misal kita mau memastikan variable password dan confirmPassword harus sama, kita bisa gunakan tag eqfield
+    - Untuk melakukan validasi dua variable, kita bisa gunakan method :
+        - Validate.VarWithValue(first, second, tag)
+        - Validate.VarWithValueCtx(ctx, first, second, tag)
+
 
 
 
