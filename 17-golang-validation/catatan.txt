@@ -70,6 +70,11 @@
 - Multiple Tag Validation : 
     Multiple Tag Validation :
     - Tag pada validation bisa lebih dari satu, kita bisa tambahkan , (koma) dan diikuti dengan tag selanjutnya
+- Tag Parameter : 
+    Tag Parameter :
+    - Validator Package, mendukung penggunaan parameter ketika menggunakan tag
+    - Ini sangat berguna pada kasus validasi yang memang butuh data parameter, contohnya min, max, length, dan lain-lain
+    - Untuk menggunakan parameter, kita bisa langsung menggunakan tanda = (sama dengan) setelah tag, dan diikuti dengan nilai parameter nya
 
 
 
