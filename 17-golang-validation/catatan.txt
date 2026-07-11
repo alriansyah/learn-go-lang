@@ -80,6 +80,18 @@
     - Selain melakukan validasi variable, Validator Package juga bisa digunakan untuk melakukan validasi terhadap struct
     - Dengan begitu, kita bisa langsung melakukan validasi terhadap semua field yang terdapat di Struct tersebut
     - Tag untuk validasi, bisa kita tambahkan dengan menambah reflection tag di Struct field-nya dengan tag validate
+- Validation Errors : 
+    Error :
+    - Saat kita melakukan validasi, Validator Package akan mengembalikan data error
+    - Jika error tersebut bernilai nil, artinya semua data valid, tidak terjadi validation error
+    - Namun jika tidak nill, artinya terdapat data yang error
+
+    Validation Errors :
+    - Kita tahu bahwa error adalah kontrak interface dari golang untuk membuat error
+    - Validator Package sendiri sebenarnya memiliki detail struct untuk implementasi error ini, yaitu ValidationErrors
+    - Kita bisa melakukan konversi ke ValidationErrors ketika terjadi validation error
+    - Terdapat banyak sekali informasi yang bisa kita ambil dari ValidationErrors
+    - ValidationErrors sendiri sebenarnya adalah alias untuk []FieldError
 
 
 
