@@ -154,6 +154,12 @@
     - Kita bisa menggunakan method FieldLevel.GetStructFieldOK2()
     - Method GetStructFieldOK2() secara otomatis akan menggunakan Param sebagai nama Field di Struct nya
     - Misal ketika kita gunakan tag xxx=Yyy, maka GetStructFieldOK2() akan mengembalikan Field Yyy didalam Struct nya
+- Struct Level Validation : 
+    Struct Level Validation :
+    - Kadang ada kasus untuk melakukan validasi butuh kombinasi lebih dari dua field
+    - Sampai saat ini, kita hanya membuat validasi untuk single field, atau cross field
+    - Validator Package mendukung pembuatan validasi di level Struct, namun kita perlu membuat validation function menggunakan parameter StructLevel
+    - Kita bisa meregistrasikan validation nya menggunakan method Validate.RegisterStructValidation()
 
 
 
