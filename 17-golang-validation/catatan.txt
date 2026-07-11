@@ -98,6 +98,10 @@
     - Validation tersebut juga bisa digunakan untuk validasi cross Field jika di dalam Struct
     - Caranya kita bisa menggunakan validation tag yang sama, namun perlu sebutkan field kedua-nya
     - Misal pada Field Password, kita bisa tambahkan validate:eqfield=ConfirmPassword
+- Validasi Nested Struct : 
+    Validasi Nested Struct :
+    - Secara default, saat kita membuat Struct yang berisikan Field Struct lainnya
+    - Validator Package akan melakukan validasi terhadap Field Struct tersebut secara otomatis
 
 
 
