@@ -128,6 +128,15 @@
     - Validator Package memiliki fitur untuk menambahkan alias, yaitu nama tag baru untuk tag lain, bisa satu atau lebih tag lain
     - Kita bisa meregistrasikan alias tag baru dengan menggunakan method :
         - Validate.RegisterAlias(alias, tag)
+- Custom Validation : https://docs.google.com/presentation/d/1RRKr7N1vf2ycFm6ZnWB0UCx9p-V9XOHJh2oaleO3lbQ/edit?slide=id.g162cb711b2a_0_591#slide=id.g162cb711b2a_0_591
+    Custom Validation :
+    - Bagaimana jika ternyata validation yang kita butuhkan tidak tersedia di baked-in Validator Package?
+    - Tenang saja, kita bisa membuat Custom Validation sendiri, dengan membuat function dengan parameter validator.FieldLevel, lalu registrasikan ke Validate menggunakan : Validate.RegisterValidation(tag, function)
+
+    FieldLevel :
+    - FieldLevel merupakan parameter dari Validation Function yang kita buat
+    - FieldLevel berisikan informasi Reflection seperti Field Value, Name dan lain-lain
+
 
 
 
