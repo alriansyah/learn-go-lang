@@ -102,6 +102,10 @@
     Validasi Nested Struct :
     - Secara default, saat kita membuat Struct yang berisikan Field Struct lainnya
     - Validator Package akan melakukan validasi terhadap Field Struct tersebut secara otomatis
+- Validasi Collection : 
+    Validasi Collection :
+    - Tidak seperti tipe data Struct, jika kita memiliki field dengan tipe data Collection seperti Array, Slice atau Map, secara default Validator Package tidak akan melakukan validasi terhadap data-data yang terdapat di dalam collection tersebut
+    - Namun, jika kita ingin melakukan validasi semua data yang terdapat di Collection-nya, kita bisa tambahkan tag dive
 
 
 
