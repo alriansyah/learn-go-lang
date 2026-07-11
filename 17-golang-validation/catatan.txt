@@ -43,6 +43,19 @@
     - Cache adalah menyimpan informasi di memory, sehingga bisa digunakan lagi tanpa harus melakukan eksekusi kode program lagi, hal ini akan mempercepat proses
     - Jika kita selalu membuat object baru, maka keuntungan cache tidak bisa didapatkan
     - Package Validator merepresentasikan object untuk validation nya dalam struct bernama Validate di package validator
+- Validasi Variable : https://docs.google.com/presentation/d/1RRKr7N1vf2ycFm6ZnWB0UCx9p-V9XOHJh2oaleO3lbQ/edit?slide=id.g162cb711b2a_0_416#slide=id.g162cb711b2a_0_416
+    Validasi Variable :
+    - Sekarang kita akan coba melakukan validasi terhadap variable menggunakan Validator Package
+    - Saat kita melakukan validasi, biasanya kita akan melakukan validasi terhadap variable yang tersedia, baik itu variable yang terdapat di Struct atau function parameter
+    - Untuk melakukan validasi variable, kita bisa gunakan method :
+        - Validate.Var(variable, tag)
+        - Validate.VarCtx(ctx, variable, tag)
+
+    Validator Tag :
+    - Validator Package menggunakan konsep Tag untuk menyebutkan validation yang ingin digunakan
+    - Setiap jenis validation, memiliki nama tag masing-masing, kita akan bahas di materi khusus untuk ini
+    - Contoh validasi bahwa sebuah value harus ada isinya, bukan default value, misal kita bisa gunakan tag “required”, jika number pastikan bukan default number 0, dan jika string bukan default string “”, dan jika array/slice, bukan default array/slice kosong
+
 
 
 
