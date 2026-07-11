@@ -148,6 +148,12 @@
     - Karena jika seperti itu, artinya Field wajib Email dan Numeric, sedangkan dua hal itu pasti berbeda
     - Pada kasus ini, kita bisa gunakan | (pipe) sebagai pemisah untuk menandakan bahwa itu adalah OR
     - Secara default, ketika menggunakan , (koma) artinya adalah AND
+- Custom Validation Cross Field : 
+    Custom Validation Cross Field :
+    - Saat membuat custom validation, parameter FieldLevel juga bisa digunakan untuk mendapatkan value kedua secara langsung dari Struct
+    - Kita bisa menggunakan method FieldLevel.GetStructFieldOK2()
+    - Method GetStructFieldOK2() secara otomatis akan menggunakan Param sebagai nama Field di Struct nya
+    - Misal ketika kita gunakan tag xxx=Yyy, maka GetStructFieldOK2() akan mengembalikan Field Yyy didalam Struct nya
 
 
 
