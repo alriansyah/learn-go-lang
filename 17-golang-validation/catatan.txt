@@ -75,6 +75,11 @@
     - Validator Package, mendukung penggunaan parameter ketika menggunakan tag
     - Ini sangat berguna pada kasus validasi yang memang butuh data parameter, contohnya min, max, length, dan lain-lain
     - Untuk menggunakan parameter, kita bisa langsung menggunakan tanda = (sama dengan) setelah tag, dan diikuti dengan nilai parameter nya
+- Validasi Struct : 
+    Validasi Struct :
+    - Selain melakukan validasi variable, Validator Package juga bisa digunakan untuk melakukan validasi terhadap struct
+    - Dengan begitu, kita bisa langsung melakukan validasi terhadap semua field yang terdapat di Struct tersebut
+    - Tag untuk validasi, bisa kita tambahkan dengan menambah reflection tag di Struct field-nya dengan tag validate
 
 
 
