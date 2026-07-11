@@ -111,6 +111,11 @@
     - Bagaimana jika data Collection nya adalah tipe data yang bukan Struct, misal []String?
     - Pada kasus seperti ini, kita bisa tambahkan validation nya langsung setelah menambahkan tag dive
     - Misal pada field Hobbies []String, kita bisa tambahkan tag dive,required,min=1, artinya tiap String di []String harus required dan min=1
+- Validasi Map : https://docs.google.com/presentation/d/1RRKr7N1vf2ycFm6ZnWB0UCx9p-V9XOHJh2oaleO3lbQ/edit?slide=id.g162cb711b2a_0_618#slide=id.g162cb711b2a_0_618
+    Validasi Map :
+    - Selain Collection Array/Slice, kita juga bisa melakukan validasi terhadap Field Map
+    - Karena dalam Map terdapat Key dan Value, kita bisa menggunakan dive untuk key dan dive untuk value
+    - Namun khusus untuk key, kita harus tandai dengan tag keys dan diakhiri dengan endkeys
 
 
 
