@@ -36,6 +36,13 @@
     - Buat folder belajar-golang-validation
     - Buat sebagai Go Module : go mod init github.com/ProgrammerZamanNow/belajar-golang-validation
     - Tambahkan library Validator Package : go get github.com/go-playground/validator/v10
+- Validate Struct : https://docs.google.com/presentation/d/1RRKr7N1vf2ycFm6ZnWB0UCx9p-V9XOHJh2oaleO3lbQ/edit?slide=id.g162cb711b2a_0_377#slide=id.g162cb711b2a_0_377
+    Validate Struct :
+    - Validator Package di desain agar thread safe dan digunakan sebagai object singleton (cukup buat satu object saja)
+    - Validator Package akan melakukan cache informasi seperti rules, tags, dan lain-lain yang berhubungan dengan validation kita
+    - Cache adalah menyimpan informasi di memory, sehingga bisa digunakan lagi tanpa harus melakukan eksekusi kode program lagi, hal ini akan mempercepat proses
+    - Jika kita selalu membuat object baru, maka keuntungan cache tidak bisa didapatkan
+    - Package Validator merepresentasikan object untuk validation nya dalam struct bernama Validate di package validator
 
 
 
