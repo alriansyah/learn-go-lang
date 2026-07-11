@@ -31,6 +31,11 @@
     - Validator Package adalah opensource library untuk melakukan validation di golang
     - Validator Package memiliki banyak sekali fitur yang bisa kita gunakan untuk mempermudah kita melakukan validasi
     - https://github.com/go-playground/validator 
+- Membuat Project : 
+    Membuat Project :
+    - Buat folder belajar-golang-validation
+    - Buat sebagai Go Module : go mod init github.com/ProgrammerZamanNow/belajar-golang-validation
+    - Tambahkan library Validator Package : go get github.com/go-playground/validator/v10
 
 
 
