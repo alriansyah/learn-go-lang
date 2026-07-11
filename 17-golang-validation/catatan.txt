@@ -14,4 +14,23 @@
     Kenapa Butuh Validasi? :
     - Sederhana, untuk memastikan request atau data yang dikirim oleh pengguna sudah sesuai dengan yang kita inginkan
     - Never trust user input
+- Validator Package : https://docs.google.com/presentation/d/1RRKr7N1vf2ycFm6ZnWB0UCx9p-V9XOHJh2oaleO3lbQ/edit?slide=id.g162cb711b2a_0_267#slide=id.g162cb711b2a_0_267
+    Manual Validation :
+    -Saat kita melakukan validasi, biasanya kita akan melakukan validasi secara manual
+    -Rata-rata, validasi manual akan menggunakan if statement
+    -Semakin banyak validasi yang diperlukan, semakin banyak if statement yang harus dibuat
+
+    Validation Library :
+    - Penggunaan library untuk melakukan validasi sangat direkomendasikan
+    - Hal ini agar kode validasi bisa lebih mudah, rapi dan juga sama antar programmer
+    - Ada banyak sekali library yang bisa kita gunakan untuk mempermudah dalam pembuatan validasi di kode program kita
+    - Salah satunya, yang akan kita gunakan di kelas ini adalah Validator Package
+
+    Validator Package :
+    - Salah satu library yang banyak digunakan untuk membantu melakukan validation adalah Validator Package
+    - Validator Package adalah opensource library untuk melakukan validation di golang
+    - Validator Package memiliki banyak sekali fitur yang bisa kita gunakan untuk mempermudah kita melakukan validasi
+    - https://github.com/go-playground/validator 
+
+
 
