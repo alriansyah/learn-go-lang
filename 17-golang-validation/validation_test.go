@@ -292,7 +292,7 @@ func TestBasicMap(t *testing.T) {
 		Addresses []Address         `validate:"required,dive"`
 		Hobbies   []string          `validate:"required,dive,required,min=3"`
 		Schools   map[string]School `validate:"required,min=2,dive,keys,required,endkeys"`
-		Wallet    map[string]int    `validate:"required,dive,keys,required,endkeys,gt=0"`
+		Wallet    map[string]int    `validate:"required,dive,keys,required,endkeys,gt=1000"`
 	}
 
 	validate := validator.New()
@@ -334,6 +334,30 @@ func TestBasicMap(t *testing.T) {
 	}
 
 	err := validate.Struct(request)
+	if err != nil {
+		fmt.Println(err.Error())
+	}
+}
+
+func TestAlias(t *testing.T) {
+	validate := validator.New()
+	validate.RegisterAlias("varchar", "required,max=255")
+
+	type Seller struct {
+		Id     string `validate:"varchar,min=5"`
+		Name   string `validate:"varchar"`
+		Owner  string `validate:"varchar"`
+		Slogan string `validate:"varchar"`
+	}
+
+	seller := Seller{
+		Id:     "123",
+		Name:   "",
+		Owner:  "",
+		Slogan: "",
+	}
+
+	err := validate.Struct(seller)
 	if err != nil {
 		fmt.Println(err.Error())
 	}

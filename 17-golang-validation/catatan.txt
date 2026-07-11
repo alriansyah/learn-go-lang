@@ -122,6 +122,12 @@
     - Pada kasus ini, jika kita ingin menambah validasi, caranya sama seperti pada Basic Collection, namun khusus untuk key, perlu ditambahkan keys dan endkeys
     - Field Wallet map[string]int dengan tag dive,keys,required,endkeys,required,gt=0, artinya key string required, dan value required dan gt=0
     - Karena value bukanlah Struct, jadi kita tidak perlu menambahkan dive lagi pada value
+- Alias Tag : https://docs.google.com/presentation/d/1RRKr7N1vf2ycFm6ZnWB0UCx9p-V9XOHJh2oaleO3lbQ/edit?slide=id.g162cb711b2a_0_441#slide=id.g162cb711b2a_0_441
+    Alias Tag :
+    - Pada beberapa kasus, kadang kita sering menggunakan beberapa tag validation yang sama untuk Field yang berbeda
+    - Validator Package memiliki fitur untuk menambahkan alias, yaitu nama tag baru untuk tag lain, bisa satu atau lebih tag lain
+    - Kita bisa meregistrasikan alias tag baru dengan menggunakan method :
+        - Validate.RegisterAlias(alias, tag)
 
 
 
