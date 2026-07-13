@@ -8,3 +8,13 @@
     - Viper adalah salah satu Library untuk Golang yang populer untuk melakukan manajemen konfigurasi
     - Viper mendukung banyak jenis file konfigurasi, seperti JSON, YAML, env file, properties, dan lain-lain
     - https://github.com/spf13/viper
+- Membuat Project : https://docs.google.com/presentation/d/10Hff_VEA7NwjI3Qow8vIDE1UqyuFb2JRChAFczkoMdg/edit?slide=id.g28c0111f790_0_277#slide=id.g28c0111f790_0_277
+    Membuat Project :
+    - Buat folder belajar-golang-viper
+    - go mod init belajar-golang-viper
+
+    Menambahkan Viper :
+    - go get github.com/spf13/viper
+
+    Menambahkan Testify :
+    - go get github.com/stretchr/testify
