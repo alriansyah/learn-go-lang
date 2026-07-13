@@ -34,3 +34,7 @@
     YAML :
     - Selain JSON, Viper juga bisa digunakan untuk membaca file dengan format YAML
     - Cara penggunaannya sama seperti ketika menggunakan JSON
+- ENV File : https://docs.google.com/presentation/d/10Hff_VEA7NwjI3Qow8vIDE1UqyuFb2JRChAFczkoMdg/edit?slide=id.g28c0111f790_0_321#slide=id.g28c0111f790_0_321
+    ENV File :
+    - Viper juga bisa digunakan untuk membaca file dengan format Env
+    - Di beberapa framework, kadang banyak yang menggunakan format ini
