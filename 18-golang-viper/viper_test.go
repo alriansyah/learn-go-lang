@@ -62,3 +62,23 @@ func TestENVFile(t *testing.T) {
 	assert.Equal(t, 3306, config.GetInt("DATABASE_PORT"))
 	assert.Equal(t, true, config.GetBool("DATABASE_SHOW_SQL"))
 }
+
+func TestENV(t *testing.T) {
+	config := viper.New()
+	config.SetConfigFile("config.env")
+	config.AddConfigPath(".")
+	config.AutomaticEnv()
+
+	// read config
+	err := config.ReadInConfig()
+	assert.Nil(t, err)
+
+	assert.Equal(t, "golang-viper", config.GetString("APP_NAME"))
+	assert.Equal(t, "Al Riansyah", config.GetString("APP_AUTHOR"))
+	assert.Equal(t, "localhost", config.GetString("DATABASE_HOST"))
+	assert.Equal(t, 3306, config.GetInt("DATABASE_PORT"))
+	assert.Equal(t, true, config.GetBool("DATABASE_SHOW_SQL"))
+
+	// menadaftarkan env variable di windows via cmd : setx FROM_ENV "Hello" 
+	assert.Equal(t, "Hello", config.GetString("FROM_ENV"))
+}

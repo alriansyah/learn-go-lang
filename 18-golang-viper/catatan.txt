@@ -38,3 +38,8 @@
     ENV File :
     - Viper juga bisa digunakan untuk membaca file dengan format Env
     - Di beberapa framework, kadang banyak yang menggunakan format ini
+- Environment Variable : 
+    Environment Variable :
+    - Kadang saat menjalankan aplikasi, kita menyimpan konfigurasi menggunakan environment variable yang terdapat di sistem operasi yang kita gunakan
+    - Secara default Viper tidak akan membaca data dari environment variable
+    - Namun jika kita mau, kita bisa menggunakan method AutomaticEnv() untuk membaca dari environment variable
