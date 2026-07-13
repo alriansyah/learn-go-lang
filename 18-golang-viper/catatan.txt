@@ -43,3 +43,13 @@
     - Kadang saat menjalankan aplikasi, kita menyimpan konfigurasi menggunakan environment variable yang terdapat di sistem operasi yang kita gunakan
     - Secara default Viper tidak akan membaca data dari environment variable
     - Namun jika kita mau, kita bisa menggunakan method AutomaticEnv() untuk membaca dari environment variable
+- Fitur Lainnya : https://docs.google.com/presentation/d/10Hff_VEA7NwjI3Qow8vIDE1UqyuFb2JRChAFczkoMdg/edit?slide=id.g28c0111f790_0_329#slide=id.g28c0111f790_0_329
+    Fitur Lainnya :
+    - Sebenarnya Viper bisa digunakan untuk membaca dari jenis file konfigurasi yang lain, misal
+    - HCL (Hasicorp Configuration Langauge)
+    - Properties (Java Properties File)
+
+    Remote Config :
+    - Viper juga bisa digunakan untuk membaca konfigurasi dari remote / server yang terdapat di aplikasi :
+    - Consul : https://github.com/spf13/viper#consul 
+    - Etcd : https://github.com/spf13/viper#etcd 
