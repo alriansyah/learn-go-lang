@@ -18,3 +18,7 @@
 
     Menambahkan Testify :
     - go get github.com/stretchr/testify
+- Membuat Viper : https://docs.google.com/presentation/d/10Hff_VEA7NwjI3Qow8vIDE1UqyuFb2JRChAFczkoMdg/edit?slide=id.g28c0111f790_0_287#slide=id.g28c0111f790_0_287
+    Membuat Viper :
+    - Untuk membuat Viper, caranya cukup mudah, kita bisa menggunakan function viper.New()
+    - Seteleh membuat Viper, kita bisa menentukan dari mana kita akan mengambil konfigurasi
