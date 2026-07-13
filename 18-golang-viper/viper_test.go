@@ -15,11 +15,29 @@ func TestViper(t *testing.T) {
 func TestJSON(t *testing.T) {
 	config := viper.New()
 	config.SetConfigName("config") // nama file config
-	config.SetConfigType("json") // extensi file
-	config.AddConfigPath(".") // path file config
+	config.SetConfigType("json")   // extensi file
+	config.AddConfigPath(".")      // path file config
 
 	// read config
 	err := config.ReadInConfig() // membaca isi file config
+	assert.Nil(t, err)
+
+	assert.Equal(t, "golang-viper", config.GetString("app.name"))
+	assert.Equal(t, "Al Riansyah", config.GetString("app.author"))
+	assert.Equal(t, "localhost", config.GetString("database.host"))
+	assert.Equal(t, 3306, config.GetInt("database.port"))
+	assert.Equal(t, true, config.GetBool("database.show_sql"))
+}
+
+func TestYAML(t *testing.T) {
+	config := viper.New()
+	//config.SetConfigName("config")
+	//config.SetConfigType("yaml")
+	config.SetConfigFile("config.yaml")
+	config.AddConfigPath(".")
+
+	// read config
+	err := config.ReadInConfig()
 	assert.Nil(t, err)
 
 	assert.Equal(t, "golang-viper", config.GetString("app.name"))

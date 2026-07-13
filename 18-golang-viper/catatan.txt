@@ -30,3 +30,7 @@
     Mengambil Value : 
     - Untuk mengambil value yang sudah dibaca dari file yang kita tentukan, kita bisa menggunakan method GetXxx, sesuai dengan tipe datanya, misal GetString, GetInt, GetBool dan lain-lain
     - Jika kita ingin mengakses nested object pada JSON, kita bisa menggunakan . (titik), misal : app.name, database.host
+- YAML : https://docs.google.com/presentation/d/10Hff_VEA7NwjI3Qow8vIDE1UqyuFb2JRChAFczkoMdg/edit?slide=id.g28c0111f790_0_317#slide=id.g28c0111f790_0_317
+    YAML :
+    - Selain JSON, Viper juga bisa digunakan untuk membaca file dengan format YAML
+    - Cara penggunaannya sama seperti ketika menggunakan JSON
