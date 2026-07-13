@@ -22,3 +22,11 @@
     Membuat Viper :
     - Untuk membuat Viper, caranya cukup mudah, kita bisa menggunakan function viper.New()
     - Seteleh membuat Viper, kita bisa menentukan dari mana kita akan mengambil konfigurasi
+- JSON : https://docs.google.com/presentation/d/10Hff_VEA7NwjI3Qow8vIDE1UqyuFb2JRChAFczkoMdg/edit?slide=id.g28c0111f790_0_313#slide=id.g28c0111f790_0_313
+    JSON :
+    - Viper bisa digunakan untuk membaca konfigurasi dari file JSON
+    - Sekarang kita akan coba membuat file JSON, lalu membaca isi konfigurasinya menggunakan Viper
+
+    Mengambil Value : 
+    - Untuk mengambil value yang sudah dibaca dari file yang kita tentukan, kita bisa menggunakan method GetXxx, sesuai dengan tipe datanya, misal GetString, GetInt, GetBool dan lain-lain
+    - Jika kita ingin mengakses nested object pada JSON, kita bisa menggunakan . (titik), misal : app.name, database.host
