@@ -1,0 +1,10 @@
+- Pengenalan Golang Viper : https://docs.google.com/presentation/d/10Hff_VEA7NwjI3Qow8vIDE1UqyuFb2JRChAFczkoMdg/edit?slide=id.g28c0111f790_0_262#slide=id.g28c0111f790_0_262
+    Application Configuration :
+    - Setiap kita membuat aplikasi, pasti kita tidak akan meng-hardcode konfigurasi aplikasi di kode program kita. Misal konfigurasi koneksi ke database, atau yang sejenisnya
+    - Hal ini dikarenakan, tiap tempat untuk menjalankan aplikasi yang kita buat mungkin akan berbeda konfigurasi nya, misal di komputer kita, di server atau di komputer orang lain
+    - Artinya, aplikasi yang kita buat, perlu memiliki kemampuan untuk mengambil data konfigurasi dari luar aplikasi, agar isi konfigurasi bisa diubah-ubah secara dinamis
+
+    Golang Viper :
+    - Viper adalah salah satu Library untuk Golang yang populer untuk melakukan manajemen konfigurasi
+    - Viper mendukung banyak jenis file konfigurasi, seperti JSON, YAML, env file, properties, dan lain-lain
+    - https://github.com/spf13/viper
