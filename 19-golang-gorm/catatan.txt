@@ -26,5 +26,7 @@
     - go get gorm.io/driver/postgres
     - go get gorm.io/driver/sqlserver
     - go get gorm.io/driver/clickhouse
-
+- Setup Project : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_359#slide=id.g28cfbdbfa13_0_359
+    Membuat Database di MySQL :
+    - create database belajar_golang_gorm;
 
