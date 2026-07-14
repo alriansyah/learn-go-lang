@@ -1,0 +1,15 @@
+- Pengenalan GORM : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_81#slide=id.g28cfbdbfa13_0_81
+    Object Relational Mapping :
+    - ORM atau singkatan dari Object Relational Mapping, adalah teknik untuk memetakan data dari database relational ke dalam object dalam pemrograman
+    - Ketika kita belajar Golang Database, kita belajar pattern bernama Repository, yang digunakan sebagai jembatan komunikasi ke Database
+    - Saat membuat Repository, kita membuat struct Entity sebagai representasi dari Tabel di database
+    - Hal itu sebenarnya sudah bisa dibilang sebuah ORM, namun masih dilakukan secara manual
+
+    Diagram Repository Pattern : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_271#slide=id.g28cfbdbfa13_0_271
+
+    GORM : 
+    - GORM adalah salah satu library untuk implementasi ORM secara otomatis di Golang
+    - Dengan menggunakan GORM, kita bisa fokus membuat pemetaan struct Entity, tanpa harus memikirkan detail dari implementasi SQL yang harus kita buat untuk memanipulasi datanya
+    - GORM juga mendukung relasi antar Entity / Table, baik itu One to One, One to Many, sampai Many to Many
+    - https://gorm.io/
+
