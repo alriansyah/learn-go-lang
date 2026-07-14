@@ -12,4 +12,19 @@
     - Dengan menggunakan GORM, kita bisa fokus membuat pemetaan struct Entity, tanpa harus memikirkan detail dari implementasi SQL yang harus kita buat untuk memanipulasi datanya
     - GORM juga mendukung relasi antar Entity / Table, baik itu One to One, One to Many, sampai Many to Many
     - https://gorm.io/
+- Membuat Project : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_77#slide=id.g28cfbdbfa13_0_77
+    Membuat Project :
+    - Buat folder belajar-golang-gorm
+    - go mod init belajar-golang-gorm
+    - Tambahkan library Testify
+    - go get github.com/stretchr/testify
+
+    Menambah Library GORM :
+    - go get gorm.io/gorm
+    - go get gorm.io/driver/sqlite
+    - go get gorm.io/driver/mysql
+    - go get gorm.io/driver/postgres
+    - go get gorm.io/driver/sqlserver
+    - go get gorm.io/driver/clickhouse
+
 
