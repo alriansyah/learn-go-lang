@@ -36,4 +36,15 @@
     - Untuk membuat koneksi ke database, kita bisa gunakan function gorm.Open()
     - Tiap database memiliki config masing-masing, kita bisa lihat semua config di database di halaman ini : 
     - https://gorm.io/docs/connecting_to_the_database.html
+- Raw SQL : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_380#slide=id.g28cfbdbfa13_0_380
+    Raw SQL :
+    - Sebelum kita belajar dengan  fitur ORM di GORM, kita akan bahas tentang bagaimana cara menggunakan Raw SQL
+    - Raw SQL artinya membuat query SQL secara manual
+    - Terdapat dua jenis SQL, untuk melakukan Query (Select), atau untuk mengubah data (Insert, Update, Delete)
+    - Untuk melakukan Query, kita bisa menggunakan method Raw(sql) di gorm.DB
+    - Dan untuk melakukan manipulasi data, bisa gunakan method Exec(sql) di gorm.DB
+
+    sql.Row & sql.Rows :
+    - GORM sendiri sebenarnya didalamnya tetap menggunakan package sql bawaan dari Golang
+    - Jika kita ingin mendapatkan hasil Query dalam bentuk sql.Rows, kita bisa menggunakan method Rows() setelah melakukan Query
 
