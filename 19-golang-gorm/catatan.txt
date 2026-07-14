@@ -29,4 +29,11 @@
 - Setup Project : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_359#slide=id.g28cfbdbfa13_0_359
     Membuat Database di MySQL :
     - create database belajar_golang_gorm;
+- Database Connection : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_389#slide=id.g28cfbdbfa13_0_389
+    Database Connection :
+    - Hal pertama yang perlu kita lakukan sebelum menggunakan GORM, adalah membuat koneksi ke database
+    - Gunakan database yang sesuai dengan yang kita gunakan
+    - Untuk membuat koneksi ke database, kita bisa gunakan function gorm.Open()
+    - Tiap database memiliki config masing-masing, kita bisa lihat semua config di database di halaman ini : 
+    - https://gorm.io/docs/connecting_to_the_database.html
 
