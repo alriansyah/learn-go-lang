@@ -124,6 +124,10 @@
     - Saat kita menggunakan Create() Method, maka tiap data akan dibuatkan SQL Insert
     - Kadang ketika kita ingin memasukkan banyak data sekaligus, ada baiknya kita menggunakan sekali SQL Insert agar lebih efektif
     - GORM mendukung hal ini menggunakan method Create(slices), atau jika ingin menentukan jumlah data per SQL Insert, kita bisa gunakan CreateInBatches(slices, size)
+- Logger : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_738#slide=id.g28cfbdbfa13_0_738
+    Logger :
+    - Secara default, informasi perintah SQL yang dieksekusi oleh GORM tidak akan di log
+    - Kita bisa mengubah level log dari GORM menggunakan gorm.Config{} ketika membuat koneksi database
 
 
 
