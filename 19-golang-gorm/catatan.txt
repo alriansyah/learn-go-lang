@@ -92,6 +92,19 @@
     - UpdatedAt akan selalu diubah menjadi time.Now() ketika diupdate datanya
     - Jika kita ingin mengubah nama field nya, kita bisa tambahkan gorm:”autoCreateTime:true” untuk CreatedAt
     - Dan menggunakan gorm:”autoUpdateTime:true” untuk UpdatedAt
+- Field Permission : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_462#slide=id.g28cfbdbfa13_0_462
+    Field Permission :
+    - Secara default, semua field di struct Model akan dianggap kolom di tabel
+    - Dan semua perubahan di field, akan di update ke tabel di database
+    - Namun, kadang-kadang, mungkin kita ingin membuat field yang tidak merepresentasikan kolom di tabel sehingga tidak perlu di create / update
+    - Atau mungkin terdapat kolom yang tidak perlu di update lagi
+    - Untuk mendukung kasus seperti itu, GORM menyediakan Field Permission menggunakan tag gorm
+    - https://gorm.io/docs/models.html#Fields-Tags
+
+    GORM Field Permission :
+    - <- : Write permission, <-:create untuk create only, <-:update untuk update only, <- untuk create dan update
+    - -> : Read permission, ->:false untuk no read permission
+    - -  : ignore field ini, tidak ada read/write permission
 
 
 
