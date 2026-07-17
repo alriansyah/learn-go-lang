@@ -47,4 +47,23 @@
     sql.Row & sql.Rows :
     - GORM sendiri sebenarnya didalamnya tetap menggunakan package sql bawaan dari Golang
     - Jika kita ingin mendapatkan hasil Query dalam bentuk sql.Rows, kita bisa menggunakan method Rows() setelah melakukan Query
+- Model : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_1390#slide=id.g28cfbdbfa13_0_1390
+    Model :
+    - Model atau Entity adalah struct representasi dari tabel di database
+    - Saat kita membuat tabel di database, direkomendasikan dibuatkan struct representasinya
+    - Hal ini agar kita tidak perlu melakukan pembuatan perintah SQL secara manual lagi
+
+    Convention :
+    - Saat membuat struct, secara default GORM akan melakukan mapping secara otomatis, dimana nama tabel akan dipilih dari nama Struct menggunakan lower_case jamak, sedangkan nama kolom akan dipilih menggunakan lower_case.
+    - Selain itu, secara otomatis GORM akan memilih field ID sebagai primary key
+    - Namun, sebenarnya disarankan dibanding dilakukan secara otomatis menggunakan GORM, lebih baik kita deklarasikan secara manual menggunakan tag
+    - https://gorm.io/docs/models.html#Fields-Tags
+
+    Table Name :
+    - Secara default, nama tabel akan menggunakan lower_case dan jamak.
+    - Misal struct User akan menggunakan tabel users
+    - Misal struct OrderDetail akan menggunakan tabel order_details
+    - Namun jika kita ingin menggunakan manual nama tabel nya, kita bisa menggunakan interface Tabler, yang mewajibkan membuat method dengan nama TableName()
+
+
 
