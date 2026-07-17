@@ -128,6 +128,18 @@
     Logger :
     - Secara default, informasi perintah SQL yang dieksekusi oleh GORM tidak akan di log
     - Kita bisa mengubah level log dari GORM menggunakan gorm.Config{} ketika membuat koneksi database
+- Transaction : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_506#slide=id.g28cfbdbfa13_0_506
+    Transaction :
+    - Transaction hanya bisa terjadi jika kita menggunakan Database Connection yang sama
+    - Saat kita menggunakan Method di gorm.DB, bisa saja tiap Method akan menggunakan Database Connection yang berbeda, karena Connection Pool nya diatur oleh GORM
+    - Jika kita ingin melakukan transaction, kita bisa menggunakan method Transaction(callback), dan di dalam function callback kita bisa buat semua kode transaction nya
+
+    Manual Transaction :
+    - Selain menggunakan Method Transaction(callback) , kita juga bisa melakukan manajemen transaksi secara manual
+    - Kita bisa membuat object gorm.DB baru ketika menjalankan transaksi menggunakan method Begin()
+    - Ketika ingin melakukan commit, kita bisa menggunakan method Commit()
+    - Ketika ingin melakukan rollback, kita bisa menggunakan method Rollback()
+
 
 
 
