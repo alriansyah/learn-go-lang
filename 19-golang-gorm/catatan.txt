@@ -105,6 +105,15 @@
     - <- : Write permission, <-:create untuk create only, <-:update untuk update only, <- untuk create dan update
     - -> : Read permission, ->:false untuk no read permission
     - -  : ignore field ini, tidak ada read/write permission
+- Embedded Struct : 
+    Embedded Struct :
+    - Secara default, field di Model akan menjadi kolom di tabel, kecuali yang menggunakan - field permission
+    - Namun bagaimana jika ternyata field yang kita buat sangat banyak?
+    - Kadang-kadang, ada baiknya kita simpan field yang sejenis dalam Struct yang berbeda
+    - Untungnya, GORM memiliki fitur bernama embedded struct, dimana kita bisa melakukan embed struct dalam field di Model, sehingga seluruh isi field di embedded struct akan dianggap field di Model utamanya
+    - Misal, kita akan tambahkan kolom first_name, middle_name dan last_name pada tabel users
+    - Lalu kita akan buat dalam embedded struct Name
+    - Kita bisa gunakan tag gorm:”embedded” untuk menandainya sebagai embedded struct
 
 
 
