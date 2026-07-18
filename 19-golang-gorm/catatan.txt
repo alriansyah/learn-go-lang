@@ -139,6 +139,29 @@
     - Kita bisa membuat object gorm.DB baru ketika menjalankan transaksi menggunakan method Begin()
     - Ketika ingin melakukan commit, kita bisa menggunakan method Commit()
     - Ketika ingin melakukan rollback, kita bisa menggunakan method Rollback()
+- Query : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_466#slide=id.g28cfbdbfa13_0_466
+    Query :
+    - Sama dengan Create(), GORM juga bisa secara otomatis membuat SQL SELECT dari Model yang kita buat
+    - Sehingga kita tidak perlu lagi membuat SQL SELECT secara manual
+
+    Single Object :
+    - GORM menyediakan beberapa Method untuk mengambil single object dari database
+    - First(), digunakan untuk mengambil data pertama yang diurutkan berdasarkan id
+    - Take(), digunakan untuk mengambil satu data, tanpa diurutkan
+    - Last(), digunakan untuk mengambil data terakhir yang diurutkan berdasarkan id
+    - Jika data tidak ditemukan, maka akan error gorm.ErrRecordNotFound
+
+    Inline Condition :
+    - Saat kita menggunakan method First, Take atau Last, terdapat parameter selanjutnya bernama Inline Condition
+    - Inline Condition tersebut secara otomatis akan menjadi kondisi WHERE di SQL SELECT nya
+
+    Query All Objects :
+    - GORM juga bisa digunakan untuk melakukan QUERY untuk semua data di tabel menggunakan method Find()
+    - Sama seperti method sebelumnya, method Find() juga mendukung Inline Condition jika kita mau tambahkan kondisi WHERE nya
+    - Untuk detail query WHERE, akan kita bahas nanti di materi Query Condition
+
+
+
 
 
 
