@@ -228,7 +228,102 @@ func TestQueryAllObjects(t *testing.T) {
 	err := db.Find(&users, "id in ?", []string{"1", "2", "3", "4"}).Error
 	assert.Nil(t, err)
 	assert.Equal(t, 4, len(users))
-	
+
+	for _, user := range users {
+		fmt.Printf("User ID: %s | First Name: %s | Password: %s\n", user.ID, user.Name.FirstName, user.Password)
+	}
+}
+
+// Advance Query
+func TestQueryCondition(t *testing.T) {
+	var users []User
+	err := db.Where("first_name like ?", "%User%").Where("password = ?", "rahasia").Find(&users).Error
+	assert.Nil(t, err)
+	assert.Equal(t, 13, len(users))
+
+	for _, user := range users {
+		fmt.Printf("User ID: %s | First Name: %s | Password: %s\n", user.ID, user.Name.FirstName, user.Password)
+	}
+}
+
+func TestOrOperator(t *testing.T) {
+	var users []User
+	err := db.Where("first_name like ?", "%User%").Or("password = ?", "rahasia").Find(&users).Error
+	assert.Nil(t, err)
+	assert.Equal(t, 14, len(users))
+
+	for _, user := range users {
+		fmt.Printf("User ID: %s | First Name: %s | Password: %s\n", user.ID, user.Name.FirstName, user.Password)
+	}
+}
+
+func TestNotOperator(t *testing.T) {
+	var users []User
+	err := db.Not("first_name like ?", "%User%").Where("password = ?", "rahasia").Find(&users).Error
+	assert.Nil(t, err)
+	assert.Equal(t, 1, len(users))
+
+	for _, user := range users {
+		fmt.Printf("User ID: %s | First Name: %s | Password: %s\n", user.ID, user.Name.FirstName, user.Password)
+	}
+}
+
+func TestSelectFields(t *testing.T) {
+	var users []User
+	err := db.Select("id", "first_name").Find(&users).Error
+	assert.Nil(t, err)
+
+	for _, user := range users {
+		assert.NotNil(t, user.ID)
+		assert.NotEqual(t, "", user.Name.FirstName)
+
+		fmt.Printf("User ID: %s | First Name: %s\n", user.ID, user.Name.FirstName)
+	}
+
+	assert.Equal(t, 14, len(users))
+}
+
+func TestStructCondition(t *testing.T) {
+	userCondition := User{
+		Name: Name{
+			FirstName: "User 5",
+			LastName:  "", // tidak bisa, karena dianggap default value
+		},
+		Password: "rahasia",
+	}
+
+	var users []User
+	err := db.Where(userCondition).Find(&users).Error
+	assert.Nil(t, err)
+	assert.Equal(t, 1, len(users))
+
+	for _, user := range users {
+		fmt.Printf("User ID: %s | First Name: %s | Password: %s\n", user.ID, user.Name.FirstName, user.Password)
+	}
+}
+
+func TestMapCondition(t *testing.T) {
+	mapCondition := map[string]interface{}{
+		"middle_name": "",
+		"last_name":   "",
+	}
+
+	var users []User
+	err := db.Where(mapCondition).Find(&users).Error
+	assert.Nil(t, err)
+	assert.Equal(t, 13, len(users))
+
+	for _, user := range users {
+		fmt.Printf("User ID: %s | First Name: %s | Password: %s\n", user.ID, user.Name.FirstName, user.Password)
+	}
+}
+
+func TestOrderLimitOffset(t *testing.T) {
+	var users []User
+	err := db.Order("id asc, first_name desc").Limit(5).Offset(5).Find(&users).Error // biasanya digunakan untuk pagination
+	assert.Nil(t, err)
+	assert.Equal(t, 5, len(users))
+
 	for _, user := range users {
 		fmt.Printf("User ID: %s | First Name: %s | Password: %s\n", user.ID, user.Name.FirstName, user.Password)
 	}

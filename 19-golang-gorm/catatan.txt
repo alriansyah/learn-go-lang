@@ -159,6 +159,34 @@
     - GORM juga bisa digunakan untuk melakukan QUERY untuk semua data di tabel menggunakan method Find()
     - Sama seperti method sebelumnya, method Find() juga mendukung Inline Condition jika kita mau tambahkan kondisi WHERE nya
     - Untuk detail query WHERE, akan kita bahas nanti di materi Query Condition
+- Advanced Query : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_478#slide=id.g28cfbdbfa13_0_478
+    Query Condition :
+    - Sebelumnya kita sudah bisa menggunakan Inline Parameter ketika melakukan Query
+    - Selain menggunakan Inline Parameter, kita juga bisa menggunakan method Where() untuk mengubah kondisi query yang akan kita buat
+
+    Or Condition :
+    - Secara default saat kita menggunakan Where(), kondisi akan digabung menggunakan AND operator
+    - Jika kita ingin menggunakan OR operator, kita bisa menggunakan method Or()
+
+    Not Condition :
+    - Dan jika kita ingin menggunakan NOT Operator, kita bisa menggunakan method Not()
+
+    Select Fields :
+    - Secara default, semua kolom akan di select dan dimasukkan ke field Model
+    - Jika misal kita ingin menentukan kolom apa saja yang mau di select, kita bisa menggunakan method Select(columns)
+
+    Struct & Map Condition :
+    - Saat kita menggunakan Where(), Not() dan Or(), kita juga bisa menggunakan parameter Struct atau Map
+    - Secara otomatis field atau key akan dijadikan kolom query, dan value akan dijadikan value query
+    - Ini cocok ketika pada kasus kita butuh query yang dinamis, sehingga kolom yang dicari bisa berbeda-beda sesuai kondisi pencarian
+
+    Order, Limit dan Offset :
+    - Untuk melakukan sorting, kita juga bisa menggunakan method Order()
+    - Dan untuk melakukan paging, kita bisa menggunakan method Limit() dan Offset()
+
+
+
+
 
 
 
