@@ -8,6 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
+	"gorm.io/gorm/clause"
 	"gorm.io/gorm/logger"
 )
 
@@ -396,4 +397,47 @@ func TestAutoIncrement(t *testing.T) {
 		fmt.Println(userLog.ID)
 		_ = i
 	}
+}
+
+// Upsert
+func TestSaveOrUpdate(t *testing.T) { // cocok untuk kasus auto increment
+	userLog := UserLog{
+		UserId: "1",
+		Action: "Test Action",
+	}
+
+	err := db.Save(&userLog).Error // insert
+	assert.Nil(t, err)
+
+	userLog.UserId = "2"
+	err = db.Save(&userLog).Error // update
+	assert.Nil(t, err)
+}
+
+func TestSaveOrUpdateNonAutoIncrement(t *testing.T) {
+	user := User{
+		ID: "100",
+		Name: Name{
+			FirstName: "User 100",
+		},
+	}
+
+	err := db.Save(&user).Error // insert
+	assert.Nil(t, err)
+
+	user.Name.FirstName = "User 100 Updated"
+	err = db.Save(&user).Error // update
+	assert.Nil(t, err)
+}
+
+func TestConflict(t *testing.T) {
+	user := User{
+		ID: "88",
+		Name: Name{
+			FirstName: "User 88",
+		},
+	}
+
+	err := db.Clauses(clause.OnConflict{UpdateAll: true}).Create(&user).Error // insert
+	assert.Nil(t, err)
 }

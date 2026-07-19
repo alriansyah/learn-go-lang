@@ -214,6 +214,24 @@
     - GORM mendukung tipe data dalam bentuk number, dimana satuannya bisa kita ganti menjadi milli untuk millisecond, atau nano untuk nanosecond, semuanya disimpan dalam waktu epoch unix time
     - Misal gorm:”autoCreateTime:milli” atau gorm:”autoUpdateTime:milli”
     - https://currentmillis.com/ 
+- Upsert : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_474#slide=id.g28cfbdbfa13_0_474
+    Save :
+    - Sebelumnya, kita telah menggunakan method Save() untuk melakukan UPDATE
+    - Method Save() sebenarnya memiliki kemampuan untuk mendeteksi apakah harus melakukan Update atau Create
+    - Jika data yang kita kirim tidak memiliki value ID, maka secara default akan melakukan Create
+    - Jika data yang kita kirim memiliki value ID, maka akan melakukan Update
+    - Hal ini mungkin cocok untuk jenis data yang ID nya adalah Auto Increment, karena kita tidak butuh ID ketika melakukan Create
+
+    Data Non Auto Increment :
+    - Bagaimana dengan jenis data yang memiliki ID tidak auto increment, misal data User sebelumnya
+    - Untungnya, Save() juga bisa digunakan untuk proses otomatis Create
+    - Jadi Save() akan mencoba melakukan Update terlebih dahulu, ketika mendeteksi jumlah EffectedRow nya adalah 0, secara otomatis Save() akan melakukan proses Create
+
+    On Conflict :
+    - GORM juga menawarkan pengaturan Conflict di method Create()
+    - Dengan pengaturan ini, kita bisa menentukan ketika kita coba Create() data, lalu terjadi conflict (data sudah ada), apa yang mau kita lakukan?
+    - Kita bisa mengubah pengaturan conflict ini menggunakan method Clauses()
+
 
 
 
