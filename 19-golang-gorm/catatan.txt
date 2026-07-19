@@ -259,6 +259,12 @@
     - GORM menyediakan sebuah struct bernama Model yang berisi field ID, CreatedAt, UpdatedAt dan DeletedAt
     - Ini cocok digunakan ketika kita menggunakan field yang sesuai dengan convention nya GORM
     - Contoh misal kita bisa gunakan struct Model ini ketika membuat model Todo
+- Lock : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_510#slide=id.g28cfbdbfa13_0_510
+    Lock :
+    - Hal yang biasa kita lakukan saat menggunakan database adalah melakukan Lock data
+    - Biasanya, ini dilakukan agar tidak terjadi RACE CONDITION ketika memanipulasi data yang sama oleh beberapa request
+    - Untuk melakukan Lock menggunakan GORM, kita bisa menambahkan Clauses() Locking
+    - Kita bisa menentukan jenis Lock nya, apakah itu UPDATE, SHARE atau yang lainnya. Sesuai dengan dukungan database yang kita gunakan
 
 
 
