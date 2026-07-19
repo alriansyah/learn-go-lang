@@ -203,6 +203,18 @@
     - Contoh di MySQL ada AUTO_INCREMENT, atau di PostgreSQL ada SERIAL
     - GORM mendukung pembuatan ID yang Auto Increment, dan secara otomatis akan melakukan query data ID setelah kita Create() datanya, sehingga tidak perlu melakukan query manual lagi
     - Untuk memberitahu bahwa field adalah auto increment, kita harus gunakan tag gorm:”autoIncrement”
+- Timestamp Tracking : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_570#slide=id.g28cfbdbfa13_0_570
+    Timestamp Tracking :
+    - Seperti yang sudah kita bahas di materi Conventions, bahwa GORM menggunakan field CreatedAt dan UpdatedAt sebagai Timestamp Tracking
+    - Atau jika ingin menggunakan field yang berbeda, kita bisa tambahkan tag gorm:”autoCreateTime” atau gorm:”autoUpdateTime”
+
+    Tipe Data Timestamp Tracking :
+    - Sebelumnya kita menggunakan tipe data time.Time sebagai field untuk Timestamp Tracking
+    - Namun, sebenarnya kita juga bisa ubah tipe datanya jika kita mau
+    - GORM mendukung tipe data dalam bentuk number, dimana satuannya bisa kita ganti menjadi milli untuk millisecond, atau nano untuk nanosecond, semuanya disimpan dalam waktu epoch unix time
+    - Misal gorm:”autoCreateTime:milli” atau gorm:”autoUpdateTime:milli”
+    - https://currentmillis.com/ 
+
 
 
 
