@@ -231,6 +231,10 @@
     - GORM juga menawarkan pengaturan Conflict di method Create()
     - Dengan pengaturan ini, kita bisa menentukan ketika kita coba Create() data, lalu terjadi conflict (data sudah ada), apa yang mau kita lakukan?
     - Kita bisa mengubah pengaturan conflict ini menggunakan method Clauses()
+- Delete : 
+    Delete :
+    - Untuk melakukan penghapusan data, kita bisa menggunakan method Delete()
+    - Method Delete() juga mendukung Inline Condition atau menggunakan Where() method
 
 
 
