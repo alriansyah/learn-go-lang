@@ -58,3 +58,27 @@ create table todos (
 ) engine = innodb;
 
 select * from todos;
+
+create table wallets (
+    id varchar(100) not null,
+    user_id varchar(100) not null unique,
+    balance bigint not null,
+    created_at timestamp not null default current_timestamp,
+    updated_at timestamp not null default current_timestamp on update current_timestamp,
+    primary key (id),
+    foreign key (user_id) references users (id)
+) engine = innodb;
+
+-- best practice
+CREATE TABLE wallets (
+    id VARCHAR(100) NOT NULL,
+    user_id VARCHAR(100) NOT NULL,
+    balance BIGINT NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    CONSTRAINT pk_wallet PRIMARY KEY (id),
+    CONSTRAINT uq_wallet_user UNIQUE (user_id),
+    CONSTRAINT fk_wallet_user FOREIGN KEY (user_id) REFERENCES users (id)
+) ENGINE = InnoDB;
+
+desc wallets;
