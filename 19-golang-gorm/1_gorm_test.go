@@ -12,7 +12,7 @@ import (
 )
 
 func OpenConnection() *gorm.DB {
-	dialect := mysql.Open("root:Izanami999_@tcp(localhost:3306)/belajar_golang_gorm?charset=utf8mb4&parseTime=True&loc=Local")
+	dialect := mysql.Open("root:password@tcp(localhost:3306)/belajar_golang_gorm?charset=utf8mb4&parseTime=True&loc=Local")
 	db, err := gorm.Open(dialect, &gorm.Config{Logger: logger.Default.LogMode(logger.Info)})
 	if err != nil {
 		panic(err)
@@ -326,5 +326,23 @@ func TestOrderLimitOffset(t *testing.T) {
 
 	for _, user := range users {
 		fmt.Printf("User ID: %s | First Name: %s | Password: %s\n", user.ID, user.Name.FirstName, user.Password)
+	}
+}
+
+// Query Non Model
+type UserResponse struct {
+	ID        string
+	FirstName string
+	LastName  string
+}
+
+func TestQueryNonModel(t *testing.T) {
+	var users []UserResponse
+	err := db.Model(&User{}).Select("id", "first_name", "last_name").Find(&users).Error
+	assert.Nil(t, err)
+	assert.Equal(t, 14, len(users))
+
+	for _, user := range users {
+		fmt.Printf("User ID: %s | First Name: %s | Last Name: %s\n", user.ID, user.FirstName, user.LastName)
 	}
 }

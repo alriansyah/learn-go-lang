@@ -183,6 +183,11 @@
     Order, Limit dan Offset :
     - Untuk melakukan sorting, kita juga bisa menggunakan method Order()
     - Dan untuk melakukan paging, kita bisa menggunakan method Limit() dan Offset()
+- Query Non Model : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_470#slide=id.g28cfbdbfa13_0_470
+    Query Non Model :
+    - Saat kita menggunakan First(), Take(), Last() dan Find(), GORM melihat struktur tabel ke Model yang kita gunakan
+    - Namun GORM memiliki fitur untuk menyimpan data ke data yang bukan Model, contoh, kita hanya ingin melakukan query first_name dan last_name saja di tabel users misalnya. Kita bisa membuat struct berbeda dibanding menggunakan model User
+    - Jika kita ingin melakukan hal ini, GORM tetap harus tahu, Model mana yang digunakan, caranya adalah kita bisa menggunakan method Model() untuk menentukan Model yang digunakan
 
 
 
