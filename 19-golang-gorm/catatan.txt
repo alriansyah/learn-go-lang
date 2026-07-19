@@ -235,6 +235,26 @@
     Delete :
     - Untuk melakukan penghapusan data, kita bisa menggunakan method Delete()
     - Method Delete() juga mendukung Inline Condition atau menggunakan Where() method
+- Soft Delete : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_558#slide=id.g28cfbdbfa13_0_558
+    Soft Delete :
+    - Soft Delete adalah salah satu praktek yang sering dilakukan ketika membuat aplikasi
+    - Soft Delete merupakan praktek menghapus data, tanpa menghapus data dari database
+    - Praktek ini membuat satu kolom biasanya berupa tipe data timestamp yang berisi waktu dihapus
+    - Jika kolom tersebut berisi data, otomatis data tersebut dianggap sudah di delete
+
+    GORM Soft Delete :
+    - GORM Mendukung fitur Soft Delete secara otomatis, caranya kita cukup membuat field DeletedAt dengan time gorm.DeletedAt (alias untuk time.Time)
+    - Jika GORM mendeteksi terdapat field dengan nama DeletedAt, secara otomatis GORM akan melakukan Soft Delete
+    - Selain itu, ketika melakukan Query, secara otomatis juga GORM akan menambah filter Soft Delete, yang artinya hasil query hanya data yang belum di delete
+
+    Unscoped :
+    - Kita kita ingin mengambil data termasuk yang sudah di soft delete, kita bisa gunakan method Unscoped()
+    - Method Unscoped() juga bisa digunakan jika kita benar-benar mau melakukan hard delete permanen di database
+
+    Peringatan :
+    - Saat menggunakan Soft Delete, perhatikan penggunaan Primary Key atau Unique Index
+    - Ketika data sudah dihapus secara soft delete, sebenarnya data masih ada di tabel, oleh karena itu pastikan data primary key atau unique index tidak duplicate dengan data yang sudah dihapus secara soft delete
+
 
 
 
