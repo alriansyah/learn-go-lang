@@ -197,6 +197,12 @@
     - Secara default, melakukan Save() untuk data Model, akan melakukan update semua kolom, walaupun tidak berubah
     - Jika kita ingin menentukan hanya beberapa kolom yang ingin di update, kita bisa menggunakan method Updates()
     - Atau menggunakan Update(kolom, value) jika hanya ingin melakukan update satu kolom saja
+- Auto Increment : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_638#slide=id.g28cfbdbfa13_0_638
+    Auto Increment :
+    - Salah satu fitur yang biasa ada di database adalah Auto Increment untuk Primary Key
+    - Contoh di MySQL ada AUTO_INCREMENT, atau di PostgreSQL ada SERIAL
+    - GORM mendukung pembuatan ID yang Auto Increment, dan secara otomatis akan melakukan query data ID setelah kita Create() datanya, sehingga tidak perlu melakukan query manual lagi
+    - Untuk memberitahu bahwa field adalah auto increment, kita harus gunakan tag gorm:”autoIncrement”
 
 
 
