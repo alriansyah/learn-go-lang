@@ -265,7 +265,7 @@
     - Biasanya, ini dilakukan agar tidak terjadi RACE CONDITION ketika memanipulasi data yang sama oleh beberapa request
     - Untuk melakukan Lock menggunakan GORM, kita bisa menambahkan Clauses() Locking
     - Kita bisa menentukan jenis Lock nya, apakah itu UPDATE, SHARE atau yang lainnya. Sesuai dengan dukungan database yang kita gunakan
-- One to One : 
+- One to One : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_562#slide=id.g28cfbdbfa13_0_562
     One to One :
     - Relationship dalam database yang paling sederhana adalah One to One, dimana data di tabel berelasi dengan satu data di tabel lain
     - Di GORM, One to One disebut juga relasi Has One
@@ -283,6 +283,14 @@
     - Hal ini cocok ketika menggunakan relasi One to Many atau Many to Many
     - Namun pada kasus One to One, kadang ada baiknya kita lakukan sekali query saja menggunakan JOIN, karena hasilnya hanya satu data, jadi lebih cepat
     - Jika kita ingin menggunakan Join, kita bisa menggunakan method Joins(), lalu menyebutkan field mana yang akan kita lakukan JOIN
+- Auto Upsert Relation : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_494#slide=id.g28cfbdbfa13_0_494
+    Auto Create/Update :
+    - Saat kita menggunakan relasi, lalu kita ingin melakukan create/update data Model, secara default GORM akan mengecek relasi yang terdapat di data tersebut
+    - Jika terdapat data relasi, GORM akan melakukan proses Upsert terhadap data relasinya, sehingga kita tidak perlu melakukan create/update data relasi secara manual
+
+    Skip Auto Create/Update :
+    - Jika kita tidak mau melakukan auto create / update data relasi, kita bisa gunakan method Omit() yang berisi clause.Associations
+    - Ini memberitahu GORM bahwa kita tidak mau melakukan auto create/update untuk data relasinya
 
 
 
