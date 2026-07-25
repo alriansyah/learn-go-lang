@@ -72,7 +72,7 @@ create table wallets (
 -- best practice
 CREATE TABLE wallets (
     id VARCHAR(100) NOT NULL,
-    user_id VARCHAR(100) NOT NULL,
+    user_id VARCHAR(100) NOT NULL UNIQUE,
     balance BIGINT NOT NULL,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -82,3 +82,15 @@ CREATE TABLE wallets (
 ) ENGINE = InnoDB;
 
 desc wallets;
+
+CREATE TABLE addresses (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    user_id VARCHAR(100) NOT NULL,
+    address VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    CONSTRAINT pk_addresses PRIMARY KEY (id),
+    CONSTRAINT fk_addresses_user FOREIGN KEY (user_id) REFERENCES users (id)
+) ENGINE = InnoDB;
+
+desc addresses;

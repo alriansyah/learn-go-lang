@@ -291,6 +291,12 @@
     Skip Auto Create/Update :
     - Jika kita tidak mau melakukan auto create / update data relasi, kita bisa gunakan method Omit() yang berisi clause.Associations
     - Ini memberitahu GORM bahwa kita tidak mau melakukan auto create/update untuk data relasinya
+- One to Many : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_1076#slide=id.g28cfbdbfa13_0_1076
+    One to Many :
+    - Relasi One to Many adalah relasi dimana data di tabel bisa memiliki relasi ke banyak data di tabel lain
+    - Di GORM, One to Many juga disebut relasi Has Many
+    - Untuk membuat relasi One to Many, kita bisa gunakan field dengan tipe Slice Model yang berelasi
+    - Kita juga bisa menentukan informasi seperti foreignKey dan references nya, sama seperti ketika menggunakan relasi One to One
 
 
 
