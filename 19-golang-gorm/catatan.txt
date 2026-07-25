@@ -297,6 +297,19 @@
     - Di GORM, One to Many juga disebut relasi Has Many
     - Untuk membuat relasi One to Many, kita bisa gunakan field dengan tipe Slice Model yang berelasi
     - Kita juga bisa menentukan informasi seperti foreignKey dan references nya, sama seperti ketika menggunakan relasi One to One
+- Belongs To : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_1141#slide=id.g28cfbdbfa13_0_1141
+    Belongs To di One to Many :
+    - Saat kita membuat relasi One to Many, ada sudut pandang lain dari Model sebelahnya, yaitu relasi Many to One
+    - Pada kasus ini, kita bisa menggunakan relasi Belongs To (milik) di GORM
+    - Contoh sebelumnya kita tahu bahwa User punya banyak Address, artinya Address milik (belongs to) User
+    - Kita bisa tambahkan relasi ini di model Address, agar ketika kita melakukan query ke model Address, kita juga bisa mendapatkan informasi relasi User nya
+    - Cara membuatnya mirip seperti ketika membuat relasi One to One
+
+    Belongs To di One to One :
+    - Selain di One to Many, sebenarnya Belongs To bisa diimplementasikan di relasi One to One
+    - Sebelumnya kita tahu bahwa User punya satu (Has One) Wallet, artinya Wallet itu milik (Belongs To) User
+    - Kita bisa tambahkan field User di Wallet sebagai relasi Belongs To
+    - Namun, karena di Golang, cyclic itu tidak boleh, maka untuk menambahkan relasi Belongs To di One to One, kita perlu menggunakan Pointer
 
 
 

@@ -607,6 +607,34 @@ func TestUserAndAddresses(t *testing.T) {
 	assert.Nil(t, err)
 }
 
+func TestUserAndAddresses2(t *testing.T) {
+	// 1. Buat user dulu
+	user := User{
+		ID:       "60",
+		Password: "rahasia",
+		Name:     Name{FirstName: "User 60"},
+	}
+	err := db.Create(&user).Error
+	assert.Nil(t, err)
+
+	// 2. Buat wallet
+	wallet := Wallet{
+		ID:      "60",
+		UserId:  user.ID,
+		Balance: 1000000,
+	}
+	err = db.Create(&wallet).Error
+	assert.Nil(t, err)
+
+	// 3. Batch insert addresses (tanpa loop!)
+	addresses := []Address{
+		{UserId: user.ID, Address: "Jalan A"},
+		{UserId: user.ID, Address: "Jalan B"},
+	}
+	err = db.Create(&addresses).Error // Batch insert
+	assert.Nil(t, err)
+}
+
 func TestPreloadJoinOneToMany(t *testing.T) {
 	var users []User
 	err := db.Model(&User{}).Preload("Addresses").Joins("Wallet").Find(&users).Error
@@ -622,4 +650,39 @@ func TestTakePreloadJoinOneToMany(t *testing.T) {
 		Take(&user, "users.id = ?", "2").Error
 	assert.Nil(t, err)
 	fmt.Println("User :", user)
+}
+
+// Belongs To / Many to One
+func TestBelongsTo(t *testing.T) {
+	// 1. Select all addresses, setelah dapa semua address,
+	// 2. Select all addresses, lalu ambil user_id dari address, lalu select user by id, lalu set ke address.User
+	fmt.Println("Preload")
+	var addresses []Address
+	err := db.Model(&Address{}).Preload("User").Find(&addresses).Error
+	assert.Nil(t, err)
+	assert.Equal(t, 6, len(addresses))
+	for _, address := range addresses {
+		fmt.Printf("%+v\n\n", address)
+	}
+
+	fmt.Println("Joins")
+	addresses = []Address{}
+	err = db.Model(&Address{}).Joins("User").Find(&addresses).Error
+	assert.Nil(t, err)
+	assert.Equal(t, 6, len(addresses))
+	for _, address := range addresses {
+		fmt.Printf("%+v\n\n", address)
+	}
+}
+
+func TestBelongsToWallet(t *testing.T) {
+	fmt.Println("Preload")
+	var wallets []Wallet
+	err := db.Model(&Wallet{}).Preload("User").Find(&wallets).Error
+	assert.Nil(t, err)
+
+	fmt.Println("Joins")
+	wallets = []Wallet{}
+	err = db.Model(&Wallet{}).Joins("User").Find(&wallets).Error
+	assert.Nil(t, err)
 }
