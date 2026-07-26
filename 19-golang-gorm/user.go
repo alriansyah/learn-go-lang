@@ -2,6 +2,8 @@ package golang_gorm
 
 import (
 	"time"
+
+	"gorm.io/gorm"
 )
 
 // User => users, otomatis (default convention) di mapping menjadi table users di database
@@ -20,6 +22,13 @@ type User struct {
 // Override nama table
 func (u *User) TableName() string {
 	return "users" // nama table
+}
+
+func (u *User) BeforeCreate(db *gorm.DB) error {
+	if u.ID == "" {
+		u.ID = "user-" + time.Now().Format("20060102150405")
+	}
+	return nil
 }
 
 type Name struct {
