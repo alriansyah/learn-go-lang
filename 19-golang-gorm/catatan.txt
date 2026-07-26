@@ -335,6 +335,17 @@
     - Untungnya, GORM bisa digunakan untuk memanipulasi data, tanpa harus menggunakan Model
     - Kita bisa gunakan method Table() pada form.DB untuk menyebut tabel mana yang mau kita pilih
     - Walaupun cara ini bisa dilakukan, tapi sebenarnya cara yang lebih baik itu menggunakan fitur bernama Association Mode, yang akan kita bahas di materi selanjutnya
+- Association Mode : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_1131#slide=id.g28cfbdbfa13_0_1131
+    Association Mode :
+    - GORM memiliki fitur bernama Association Mode, yang digunakan untuk memanipulasi data relasi menggunakan object gorm.Association
+    - Fitur ini sangat berguna, misal ketika kita ingin menambah relasi ke Model, terutama untuk relasi Many To Many yang tidak memiliki Model untuk tabel penghubungnya
+    - Untuk membuat object Association, kita cukup menggunakan method Association(relasi)
+
+    Kenapa Error? :
+    - Hal ini karena di Tabel wallets, kita menambah aturan constraint NOT NULL
+    - Jadi ketika GORM membuat wallet dengan id 01, dan dia coba menghapus user_id di wallet sebelumnya yaitu wallet 1, maka terjadi error
+    - Namun dari sini kita bisa tahu bahwa GORM akan menghapus relasi ke data sebelumnya ketika kita melakukan replace
+    - Replace() ini hanya cocok untuk relasi One to One atau Belongs To, dan ketika kita coba menggunakan Append() di relasi tersebut, secara otomatis GORM akan mengubah menjadi operasi Replace(), bukan Append() lagi
 
 
 
