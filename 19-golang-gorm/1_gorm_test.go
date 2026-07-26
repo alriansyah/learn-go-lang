@@ -15,7 +15,7 @@ import (
 )
 
 func OpenConnection() *gorm.DB {
-	dialect := mysql.Open("root:Izanami999_@tcp(localhost:3306)/belajar_golang_gorm?charset=utf8mb4&parseTime=True&loc=Local")
+	dialect := mysql.Open("root:password@tcp(localhost:3306)/belajar_golang_gorm?charset=utf8mb4&parseTime=True&loc=Local")
 	db, err := gorm.Open(dialect, &gorm.Config{Logger: logger.Default.LogMode(logger.Info)})
 	if err != nil {
 		panic(err)
@@ -915,4 +915,29 @@ func TestContext(t *testing.T) {
 	err := db.WithContext(ctx).Find(&users).Error
 	assert.Nil(t, err)
 	assert.Equal(t, 18, len(users))
+}
+
+// Scopes
+func BrokeWalletBalance(db *gorm.DB) *gorm.DB {
+	return db.Where("balance = ?", 0)
+}
+
+func SultanWalletBalance(db *gorm.DB) *gorm.DB {
+	return db.Where("balance > ?", 500000)
+}
+
+func TestScopes(t *testing.T) {
+	var wallets []Wallet
+	err := db.Scopes(BrokeWalletBalance).Find(&wallets).Error
+	assert.Nil(t, err)
+
+	jsonData, _ := json.MarshalIndent(wallets, "", "  ")
+	fmt.Println(string(jsonData))
+
+	wallets = []Wallet{}
+	err = db.Scopes(SultanWalletBalance).Find(&wallets).Error
+	assert.Nil(t, err)
+
+	jsonData, _ = json.MarshalIndent(wallets, "", "  ")
+	fmt.Println(string(jsonData))
 }

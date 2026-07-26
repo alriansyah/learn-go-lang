@@ -384,6 +384,11 @@
     - Saat kita menggunakan Golang, biasanya kita akan menggunakan context.Context
     - Bagaimana dengan GORM? Dari awal kita belum pernah menggunakan Context
     - GORM juga mendukung penggunaan Context, kita bisa menggunakan method WithContext() ketika mau melakukan operasi menggunakan GORM
+- Scopes : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_518#slide=id.g28cfbdbfa13_0_518
+    Scopes :
+    - Sebelumnya kita sudah pernah menggunakan method Scopes()
+    - Method Scopes() juga bisa digunakan untuk menambahkan custom logic yang mungkin sering kita gunakan
+    - Kita cukup menambahkan function(*gorm.DB) *gorm.DB
 
 
 
