@@ -14,7 +14,7 @@ import (
 )
 
 func OpenConnection() *gorm.DB {
-	dialect := mysql.Open("root:password@tcp(localhost:3306)/belajar_golang_gorm?charset=utf8mb4&parseTime=True&loc=Local")
+	dialect := mysql.Open("root:Izanami999_@tcp(localhost:3306)/belajar_golang_gorm?charset=utf8mb4&parseTime=True&loc=Local")
 	db, err := gorm.Open(dialect, &gorm.Config{Logger: logger.Default.LogMode(logger.Info)})
 	if err != nil {
 		panic(err)
@@ -829,5 +829,42 @@ func TestPreloadingAll(t *testing.T) {
 	assert.Nil(t, err)
 
 	jsonData, _ := json.MarshalIndent(user, "", "  ")
+	fmt.Println(string(jsonData))
+}
+
+// Joins
+func TestJoinQuery(t *testing.T) {
+	var users []User
+	err := db.Joins("join wallets on wallets.user_id = users.id").Find(&users).Error
+	assert.Nil(t, err)
+	assert.Equal(t, 5, len(users))
+
+	jsonData, _ := json.MarshalIndent(users, "", "  ")
+	fmt.Println(string(jsonData))
+
+	users = []User{}
+	err = db.Joins("Wallet").Find(&users).Error // left join
+	assert.Nil(t, err)
+	assert.Equal(t, 18, len(users))
+
+	jsonData, _ = json.MarshalIndent(users, "", "  ")
+	fmt.Println(string(jsonData))
+}
+
+func TestJoinWithCondition(t *testing.T) {
+	var users []User
+	err := db.Joins("join wallets on wallets.user_id = users.id AND wallets.balance > ?", 500000).Find(&users).Error
+	assert.Nil(t, err)
+	assert.Equal(t, 5, len(users))
+
+	jsonData, _ := json.MarshalIndent(users, "", "  ")
+	fmt.Println(string(jsonData))
+
+	users = []User{}
+	err = db.Joins("Wallet").Where("Wallet.balance > ?", 500000).Find(&users).Error
+	assert.Nil(t, err)
+	assert.Equal(t, 5, len(users))
+
+	jsonData, _ = json.MarshalIndent(users, "", "  ")
 	fmt.Println(string(jsonData))
 }
