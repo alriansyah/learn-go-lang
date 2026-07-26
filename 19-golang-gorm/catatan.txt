@@ -389,6 +389,13 @@
     - Sebelumnya kita sudah pernah menggunakan method Scopes()
     - Method Scopes() juga bisa digunakan untuk menambahkan custom logic yang mungkin sering kita gunakan
     - Kita cukup menambahkan function(*gorm.DB) *gorm.DB
+- Connection Pool : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_1432#slide=id.g28cfbdbfa13_0_1432
+    Connection Pool :
+    - Saat kita belajar di kelas Golang Database, kita belajar tentang Pool, dimana Golang mengatur maintain koneksi yang terbuka dan tertutup secara otomatis
+    - Kita hanya cukup menggunakan saja, tanpa harus pusing mengaturnya
+    - Bagaimana dengan GORM?
+    - GORM sendiri sebenarnya didalamnya tetap menggunakan sql.DB
+    - Jadi jika kita ingin mengubah pengaturan Pool nya, kita bisa menggunakan sql.DB
 
 
 
