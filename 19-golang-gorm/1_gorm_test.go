@@ -14,7 +14,7 @@ import (
 )
 
 func OpenConnection() *gorm.DB {
-	dialect := mysql.Open("root:Izanami999_@tcp(localhost:3306)/belajar_golang_gorm?charset=utf8mb4&parseTime=True&loc=Local")
+	dialect := mysql.Open("root:password@tcp(localhost:3306)/belajar_golang_gorm?charset=utf8mb4&parseTime=True&loc=Local")
 	db, err := gorm.Open(dialect, &gorm.Config{Logger: logger.Default.LogMode(logger.Info)})
 	if err != nil {
 		panic(err)
@@ -797,4 +797,37 @@ func TestAssociationClear(t *testing.T) {
 
 	err = db.Model(&product).Association("LikedByUsers").Clear()
 	assert.Nil(t, err)
+}
+
+// Preload
+func TestPreloadingWithCondition(t *testing.T) {
+	var user User
+	err := db.Preload("Wallet", "balance > ?", 100).Take(&user, "id = ?", "1").Error
+	assert.Nil(t, err)
+
+	fmt.Println(user)
+	jsonData, _ := json.MarshalIndent(user, "", "  ")
+	fmt.Println(string(jsonData))
+}
+
+func TestPreloadingNested(t *testing.T) {
+	var wallet Wallet
+	err := db.Preload("User.Addresses").Take(&wallet, "id = ?", "2").Error
+	assert.Nil(t, err)
+
+	// fmt.Println(wallet)
+	// fmt.Println(wallet.User)
+	// fmt.Println(wallet.User.Addresses)
+
+	jsonData, _ := json.MarshalIndent(wallet, "", "  ")
+	fmt.Println(string(jsonData))
+}
+
+func TestPreloadingAll(t *testing.T) {
+	var user User
+	err := db.Preload(clause.Associations).Take(&user, "id = ?", "2").Error
+	assert.Nil(t, err)
+
+	jsonData, _ := json.MarshalIndent(user, "", "  ")
+	fmt.Println(string(jsonData))
 }

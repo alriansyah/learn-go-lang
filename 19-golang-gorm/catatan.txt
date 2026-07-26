@@ -346,7 +346,20 @@
     - Jadi ketika GORM membuat wallet dengan id 01, dan dia coba menghapus user_id di wallet sebelumnya yaitu wallet 1, maka terjadi error
     - Namun dari sini kita bisa tahu bahwa GORM akan menghapus relasi ke data sebelumnya ketika kita melakukan replace
     - Replace() ini hanya cocok untuk relasi One to One atau Belongs To, dan ketika kita coba menggunakan Append() di relasi tersebut, secara otomatis GORM akan mengubah menjadi operasi Replace(), bukan Append() lagi
+- Preloading : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_716#slide=id.g28cfbdbfa13_0_716
+    Preloading :
+    - Sebelumnya kita sudah tahu bahwa untuk melakukan loading relasi, kita bisa menggunakan Preloading()
+    - Bagaimana jika kita ingin menambahkan kondisi ketika melakukan Preloading?
+    - Kita bisa tambahkan Inline Condition ketika melakukan Preloading
 
+    Nested Preloading :
+    - Preloading juga bisa dilakukan untuk relasi yang Nested
+    - Misal kita akan melakukan query untuk model Wallet, kita ingin melakukan Preload ke User dan juga ke Address nya
+    - Kita bisa gunakan Preloading dengan menggunakan . (titik), misal “User.Addresses”
+
+    Preload All :
+    - Jika kita ingin melakukan Preload semua relasi di Model, kita bisa menggunakan clauses.Associations ketika melakukan Preloading()
+    - Namun perlu diingat, bahwa Preload All tidak akan melakukan load Nested Relation
 
 
 
