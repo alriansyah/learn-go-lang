@@ -310,7 +310,31 @@
     - Sebelumnya kita tahu bahwa User punya satu (Has One) Wallet, artinya Wallet itu milik (Belongs To) User
     - Kita bisa tambahkan field User di Wallet sebagai relasi Belongs To
     - Namun, karena di Golang, cyclic itu tidak boleh, maka untuk menambahkan relasi Belongs To di One to One, kita perlu menggunakan Pointer
+- Many to Many : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_498#slide=id.g28cfbdbfa13_0_498
+    Many to Many :
+    - Relasi yang paling kompleks ada relasi Many to Many
+    - Seperti yang kita tahu, bahwa untuk relasi Many to Many, kita harus membuat tabel jembatan penghubung antara dua tabel
+    - GORM juga mendukung relasi Many to Many, caranya mudah kita hanya perlu membuat field berupa Slice di kedua Model yang berelasi
+    - Untuk memberitahu tabel penghubung dan juga kolom untuk join nya, kita bisa menggunakan tag
 
+    Many to Many Tag :
+    - Untuk memberitahu nama tabel penghubung, kita bisa menggunakan tag gorm:”many2many:nama_tabel”
+    - Saat melakukan query Many to Many, terdapat banyak sekali kolom yang perlu diketahui, seperti kolom id di Model pertama, kolom foreign key Model pertama di tabel penghubung, kolom id di Model kedua, kolom foreign key Model kedua di tabel penghubung, semua bisa kita gunakan tag
+    - gorm:”foreignKey:kolom_id” untuk id di Model pertama
+    - gorm:”joinForeignKey:kolom_id” untuk foreign key Model pertama di tabel penghubung
+    - gorm:”references:kolom_id” untuk id di Model kedua
+    - gorm:”referencesForeignKey:kolom_id” untuk foreign key Model kedua di tabel penghubung
+
+    Contoh Kasus :
+    - Misal kita akan membuat fitur dimana User bisa like banyak Product, dan satu Product bisa di like banyak User
+    - Artinya kita akan membuat model Product, lalu akan membuat Relasi Many to Many antara User dan Product
+
+    Create/Update/Delete Relasi Many to Many :
+    - Salah satu tantangan relasi Many to Many adalah, bagaimana cara melakukan Create/Update/Delete relasi Many to Many?
+    - Hal ini karena tabel penghubung tidak memiliki representasi Model di GORM
+    - Untungnya, GORM bisa digunakan untuk memanipulasi data, tanpa harus menggunakan Model
+    - Kita bisa gunakan method Table() pada form.DB untuk menyebut tabel mana yang mau kita pilih
+    - Walaupun cara ini bisa dilakukan, tapi sebenarnya cara yang lebih baik itu menggunakan fitur bernama Association Mode, yang akan kita bahas di materi selanjutnya
 
 
 

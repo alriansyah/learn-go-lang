@@ -94,3 +94,24 @@ CREATE TABLE addresses (
 ) ENGINE = InnoDB;
 
 desc addresses;
+
+CREATE TABLE products (
+    id VARCHAR(100) NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    price BIGINT NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    CONSTRAINT pk_products PRIMARY KEY (id)
+) ENGINE = InnoDB;
+
+desc products;
+
+CREATE TABLE user_like_product (
+    user_id VARCHAR(100) NOT NULL,
+    product_id VARCHAR(100) NOT NULL,
+    CONSTRAINT pk_user_like_product PRIMARY KEY (user_id, product_id),
+    CONSTRAINT fk_user_like_product_user FOREIGN KEY (user_id) REFERENCES users (id),
+    CONSTRAINT fk_user_like_product_product FOREIGN KEY (product_id) REFERENCES products (id)
+) ENGINE = InnoDB;
+
+desc user_like_product;
