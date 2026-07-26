@@ -379,6 +379,11 @@
     Group By & Having :
     - GORM juga menyediakan method untuk melakukan Group By menggunakan method Group()
     - Dan untuk melakukan Having menggunakan method Having()
+- Context : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_502#slide=id.g28cfbdbfa13_0_502
+    Context :
+    - Saat kita menggunakan Golang, biasanya kita akan menggunakan context.Context
+    - Bagaimana dengan GORM? Dari awal kita belum pernah menggunakan Context
+    - GORM juga mendukung penggunaan Context, kita bisa menggunakan method WithContext() ketika mau melakukan operasi menggunakan GORM
 
 
 

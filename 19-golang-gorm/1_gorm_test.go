@@ -1,6 +1,7 @@
 package golang_gorm
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"strconv"
@@ -14,7 +15,7 @@ import (
 )
 
 func OpenConnection() *gorm.DB {
-	dialect := mysql.Open("root:password@tcp(localhost:3306)/belajar_golang_gorm?charset=utf8mb4&parseTime=True&loc=Local")
+	dialect := mysql.Open("root:Izanami999_@tcp(localhost:3306)/belajar_golang_gorm?charset=utf8mb4&parseTime=True&loc=Local")
 	db, err := gorm.Open(dialect, &gorm.Config{Logger: logger.Default.LogMode(logger.Info)})
 	if err != nil {
 		panic(err)
@@ -904,4 +905,14 @@ func TestAggregationGroupByAndHaving(t *testing.T) {
 		Find(&results).Error
 	assert.Nil(t, err)
 	assert.Equal(t, 5, len(results))
+}
+
+// Context
+func TestContext(t *testing.T) {
+	ctx := context.Background()
+
+	var users []User
+	err := db.WithContext(ctx).Find(&users).Error
+	assert.Nil(t, err)
+	assert.Equal(t, 18, len(users))
 }
