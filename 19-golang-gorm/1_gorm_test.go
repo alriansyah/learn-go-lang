@@ -14,7 +14,7 @@ import (
 )
 
 func OpenConnection() *gorm.DB {
-	dialect := mysql.Open("root:Izanami999_@tcp(localhost:3306)/belajar_golang_gorm?charset=utf8mb4&parseTime=True&loc=Local")
+	dialect := mysql.Open("root:password@tcp(localhost:3306)/belajar_golang_gorm?charset=utf8mb4&parseTime=True&loc=Local")
 	db, err := gorm.Open(dialect, &gorm.Config{Logger: logger.Default.LogMode(logger.Info)})
 	if err != nil {
 		panic(err)
@@ -867,4 +867,41 @@ func TestJoinWithCondition(t *testing.T) {
 
 	jsonData, _ = json.MarshalIndent(users, "", "  ")
 	fmt.Println(string(jsonData))
+}
+
+// Query Aggregation
+func TestCount(t *testing.T) {
+	var count int64
+	err := db.Model(&User{}).Joins("Wallet").Where("Wallet.balance > ?", 500000).Count(&count).Error
+	assert.Nil(t, err)
+	assert.Equal(t, int64(5), count)
+}
+
+type AggregationResult struct {
+	TotalBalance int64
+	MinBalance   int64
+	MaxBalance   int64
+	AvgBalance   float64
+}
+
+func TestAggregation(t *testing.T) {
+	var result AggregationResult
+	err := db.Model(&Wallet{}).Select("sum(balance) as total_balance", "min(balance) as min_balance",
+		"max(balance) as max_balance", "avg(balance) as avg_balance").Take(&result).Error
+	assert.Nil(t, err)
+
+	assert.Equal(t, int64(5000000), result.TotalBalance)
+	assert.Equal(t, int64(1000000), result.MinBalance)
+	assert.Equal(t, int64(1000000), result.MaxBalance)
+	assert.Equal(t, float64(1000000), result.AvgBalance)
+}
+
+func TestAggregationGroupByAndHaving(t *testing.T) {
+	var results []AggregationResult
+	err := db.Model(&Wallet{}).Select("sum(balance) as total_balance", "min(balance) as min_balance",
+		"max(balance) as max_balance", "avg(balance) as avg_balance").
+		Joins("User").Group("User.id").Having("sum(balance) > ?", 500000).
+		Find(&results).Error
+	assert.Nil(t, err)
+	assert.Equal(t, 5, len(results))
 }

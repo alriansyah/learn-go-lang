@@ -369,6 +369,16 @@
     Join Condition :
     - Saat menggunakan Joins, ketika kita ingin menambahkan kondisi di Join Table nya, jangan lupa untuk menyebutkan nama tabel nya
     - Namun saat menggunakan Joins() menggunakan nama relasi, secara otomatis Gorm akan membuat alias untuk nama relasi, jadi kita harus menggunakan nama relasi ketika menambahkan kondisi
+- Query Aggregation : https://docs.google.com/presentation/d/11NNdQj-3UkmkdQRPQC0CtzeDfLP-IsSiIfDbDmpfo_4/edit?slide=id.g28cfbdbfa13_0_1317#slide=id.g28cfbdbfa13_0_1317
+    Query Aggregation :
+    - Ada banyak Query Aggregation yang biasanya tersedia di Database
+    - Di GORM, hanya menyediakan method Aggregation untuk Count() saja
+    - Jika kita ingin melakukan Aggregation misal menggunakan Avg, Sum, Max, dan lain-lain
+    - Maka kita harus melakukan secara manual menggunakan Select()
+
+    Group By & Having :
+    - GORM juga menyediakan method untuk melakukan Group By menggunakan method Group()
+    - Dan untuk melakukan Having menggunakan method Having()
 
 
 
