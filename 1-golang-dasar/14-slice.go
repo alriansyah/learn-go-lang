@@ -31,7 +31,8 @@ func main() {
 	daySlice1[1] = "Minggu Baru"
 	fmt.Println(daySlice1)
 	fmt.Println(days)
-
+	
+	fmt.Println("--------------")
 	daySlice2 := append(daySlice1, "Libur Baru")
 	daySlice2[0] = "Sabtu Lama"
 	// daysBaru := [...]string{"Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu", "Libur Baru"}
@@ -50,7 +51,7 @@ func main() {
 	fmt.Println(len(newSlice))
 	fmt.Println(cap(newSlice))
 
-	newSlice2 := append(newSlice, "Eko")
+	newSlice2 := append(newSlice, "Eko") // slice baru, namu dengan referensi array yang sama
 	fmt.Println(newSlice2)
 	fmt.Println(len(newSlice2))
 	fmt.Println(cap(newSlice2))
