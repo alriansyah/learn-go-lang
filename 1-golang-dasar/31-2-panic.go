@@ -14,6 +14,7 @@ import "fmt"
 
 
 // analogy di bahasa pemrogramman lain untuk defer, panic, dan recover adalah try catch, throw, dan finally
+// namun di go tidak ada try catch
 
 func endApp() {
 	fmt.Println("End app")
