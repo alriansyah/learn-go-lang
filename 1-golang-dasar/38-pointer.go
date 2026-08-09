@@ -18,7 +18,7 @@ func main() {
 	//fmt.Println(address2) // berubah menjadi Bandung
 
 	var address1 Address = Address{"Subang", "Jawa Barat", "Indonesia"}
-	var address2 *Address = &address1 // pointer, pointer ke address1
+	var address2 *Address = &address1 // pointer, reference/pointer ke address1
 
 	address2.City = "Bandung"
 	fmt.Println(address1) // ikut berubah
