@@ -148,6 +148,7 @@ Pelajari Blocking dan Non Blocking, kalu tidak salah golang dengan concurrency (
 	Sebenarnya kita tidak perlu memanage threadnya, karena sudah diatur otomatis oleh go scheduler
 
 
+Noted : Semua package sync sudah aman dari race condition
 
 
 

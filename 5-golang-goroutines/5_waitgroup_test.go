@@ -10,7 +10,7 @@ import (
 func RunAsynchronous(group *sync.WaitGroup) {
 	defer group.Done()
 
-	group.Add(1)
+	group.Add(1) // running 1 proses asynchronous
 
 	fmt.Println("Hello")
 	time.Sleep(1 * time.Second)
