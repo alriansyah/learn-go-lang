@@ -8,6 +8,9 @@ import (
 	"time"
 )
 
+// - Context imutabele : ketika sudah dibuat tidak bisa diubah lagi
+// - Jika melakukan perubahan, maka akan membuat context baru
+
 func TestContext(t *testing.T) {
 	background := context.Background()
 	fmt.Println(background)
@@ -36,11 +39,11 @@ func TestContextWithValue(t *testing.T) {
 	fmt.Println(contextF)
 	fmt.Println(contextG)
 
-	fmt.Println(contextF.Value("f"))
-	fmt.Println(contextF.Value("c"))
-	fmt.Println(contextF.Value("b"))
+	fmt.Println(contextF.Value("f")) // dapat
+	fmt.Println(contextF.Value("c")) // dapat milik parent
+	fmt.Println(contextF.Value("b")) // tidak dapat, beda parent
 
-	fmt.Println(contextA.Value("b"))
+	fmt.Println(contextA.Value("b")) // tidak bisa mengambil data child
 }
 
 func CreateCounter(ctx context.Context) chan int {
